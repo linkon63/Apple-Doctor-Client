@@ -25,9 +25,14 @@ const YourServiceOrder = () => {
         <div className='d-flex'>
             <DashboardNavbar></DashboardNavbar>
             <div className='container text-center'>
+                        {!orders.length && <div className="spinner-grow" role="status">
+                            <span className="sr-only">Loading...</span>
+                        </div>}
                 {
                     orders.length === true ? <h1>You Have No Order Sir</h1> : <h1 className='mt-3 text-info'>Your Order Services : {orders.length}</h1>
+
                 }
+                
                 <div className='row'>
                     {
                         orders.map(order => <ServiceOrderCard order={order}></ServiceOrderCard>)

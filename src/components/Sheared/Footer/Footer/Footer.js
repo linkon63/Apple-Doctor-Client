@@ -1,6 +1,7 @@
 import { Tab } from '@material-ui/core';
 import { Call, Devices, Facebook, Flag, Instagram, Laptop, LinkedIn, PhoneAndroid, PhoneIphone, RadioButtonChecked, RssFeed, Toll, Watch, WhatsApp } from '@material-ui/icons';
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Footer.css';
 
 const Footer = () => {
@@ -33,10 +34,10 @@ const Footer = () => {
                     <div className="col-md-3">
                         <h5 className='text-white mt-5 text-center pt-5'>Our Social Media Pages</h5>
                         <div className="container mt-5">
-                           <Facebook color='primary' style={{ fontSize: 50 }}></Facebook>
-                            <Instagram color='secondary'  style={{ fontSize: 50 }}></Instagram>
-                            <WhatsApp style={{ color:'#1e7e34' ,fontSize: 50 }}></WhatsApp>
-                            <LinkedIn style={{ color:'#ffff' ,fontSize: 50 }}></LinkedIn>
+                           <a href='https://www.facebook.com/lin.kon.63'><Facebook color='primary' style={{ fontSize: 50 }}></Facebook></a> 
+                           <a href='https://www.facebook.com/lin.kon.63'><Instagram color='secondary'  style={{ fontSize: 50 }}></Instagram></a> 
+                           <a href='https://www.facebook.com/lin.kon.63'><WhatsApp style={{ color:'#1e7e34' ,fontSize: 50 }}></WhatsApp></a> 
+                           <a href='https://www.facebook.com/lin.kon.63'><LinkedIn style={{ color:'#ffff' ,fontSize: 50 }}></LinkedIn></a> 
                         </div>
                     </div>
                 </div>

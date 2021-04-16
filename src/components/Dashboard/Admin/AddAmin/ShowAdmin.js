@@ -34,6 +34,11 @@ const ShowAdmin = () => {
     }
     return (
         <div className='m-auto mt-5'>
+            {!admin.length && 
+                <div className="spinner-grow" role="status">
+                    <span className="sr-only">Loading...</span>
+                </div>
+            }
             {
                 admin.length && admin.map(ad =>
                     <div className="card mb-2">

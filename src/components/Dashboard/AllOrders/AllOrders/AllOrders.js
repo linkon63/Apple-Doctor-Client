@@ -21,7 +21,13 @@ const AllOrders = () => {
         <div className='d-flex'>
             <DashboardNavbar></DashboardNavbar>
             <div className='container'>
-                <h1 className='text-success text-center mt-3'>Your DataBase All Order Are Here : {orders.length}</h1>
+                <h1 className='text-success text-center mt-3'>Your DataBase All Order Are Here : {orders.length}
+                    {!orders.length && 
+                        <div className="spinner-grow" role="status">
+                            <span className="sr-only">Loading...</span>
+                        </div>
+                    }
+                </h1>
                 <div className='pt-2'>
                     {
                         orders.map(order => <OrderShowing order={order} key={order._id}></OrderShowing>)

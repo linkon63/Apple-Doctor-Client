@@ -1,7 +1,5 @@
 import React from 'react';
 import SingleService from '../SingleService/SingleService';
-
-import servicesData from '../../../../fakeDate/serviceData.json';
 import { DoubleArrow } from '@material-ui/icons';
 import { useState } from 'react';
 import { useEffect } from 'react';
@@ -18,13 +16,17 @@ const Services = () => {
             <h1 className='ml-5 pt-5'><DoubleArrow></DoubleArrow>SERVICES</h1>
             <div>
                 <div className='container text-center pb-5' >
-                    <h1 className='text-dark' style={{ fontFamily: 'arial' }}>Select a device to find out the cost of repairs</h1>
+                    <h1 className='text-dark' style={{ fontFamily: 'arial' }}>Select a device to find out the cost of repairs 
+                    {!services.length && <div className="spinner-grow" role="status">
+                        <span className="sr-only">Loading...</span>
+                        </div>}
+                    </h1>
                 </div>
             </div>
             <div className=' container m-auto'>
-                <div className='row' id='services'>
+                <div className='row text-center' id='services'>
                     {
-                        services.length && services.map(service => <SingleService service={service}></SingleService>)
+                        services.map(service => <SingleService service={service}></SingleService>)
                     }
                 </div>
             </div>

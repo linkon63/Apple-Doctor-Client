@@ -43,15 +43,24 @@ const Login = () => {
         });
     }
     return (
-        <div className="container mt-5 pt-5">
-            <div className="card text-center ">
-                <div className="card-header bg-secondary text-white">
-                    Please Login for Submit your Order
+        <div className="row">
+            <div className="col-md-6">
+                <div className="container mt-5 pt-5">
+                <div className="card text-center mt-5 p-5">
+                    <div className="card-header bg-success text-dark">
+                       <strong> Please Login for Submit your Order</strong>
+                        </div>
+                    <div className="card-body">
+                        <h5 className="card-title">Welcome to login page sir</h5>
+                        <p className="card-text">Do not cancel login page without login</p>
+                        <button onClick={handleGoogleSignIn} className='btn btn-dark'> <Android></Android> Sign in with Google</button>
                     </div>
-                <div className="card-body">
-                    <h5 className="card-title">Welcome to login page sir</h5>
-                    <p className="card-text">Do not cancel login page without login</p>
-                    <button onClick={handleGoogleSignIn} className='btn btn-dark'> <Android></Android> Sign in with Google</button>
+                </div>
+            </div>
+            </div>
+            <div className="col-md-6">
+                <div className="container mt-5 pt-5">
+                    <img className='w-100' src="https://i.ibb.co/hYmNcBN/mishaal-zahed-wm-F3-XMFSG00-unsplash-1.jpg" alt="login img" />
                 </div>
             </div>
         </div>

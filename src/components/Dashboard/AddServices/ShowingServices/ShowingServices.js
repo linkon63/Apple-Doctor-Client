@@ -30,6 +30,9 @@ const ShowingServices = () => {
     }
     return (
         <div className='m-auto mt-5'>
+            {!services.length && <div className="spinner-grow" role="status">
+                        <span className="sr-only">Loading...</span>
+                        </div>}
             {
                 services.length && services.map(service =>
                     <div className="card mb-2">

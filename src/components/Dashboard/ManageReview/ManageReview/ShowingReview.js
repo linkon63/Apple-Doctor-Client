@@ -24,13 +24,15 @@ const ShowingReview = ({ review }) => {
 
     return (
         <div className='col-md-4 mb-3'>
+            
             <div className="card h-100 text-center">
                 <img src={review.image} className="card-img-top w-50 m-auto" alt="..." />
                 <div className="card-body">
                     <h5 className="card-title">{review.name}</h5>
                     <p className="card-text">{review.dec}</p>
+                    <button onClick={() => { handleDelete(review._id) }} className='btn btn-danger'>Delete</button>
                 </div>
-                <button onClick={() => { handleDelete(review._id) }} className='btn btn-danger'>Delete</button>
+                
             </div>
         </div>
     );

@@ -17,9 +17,13 @@ const Testimonilas = () => {
     }, []);
     return (
         <div >
-            <h1 className='pt-5 ml-5 pb-5'><DoubleArrow></DoubleArrow>Testimonial</h1>
+            <h1 className='pt-5 ml-5 pb-5'><DoubleArrow></DoubleArrow>Testimonial
+                {!reviewsData.length && <div className="spinner-grow" role="status">
+                        <span className="sr-only">Loading...</span>
+                    </div>}
+            </h1>
             <div className='container'>
-                <div className="row row-cols-1 row-cols-md-3 g-2">
+                <div className="row row-cols-1 row-cols-md-3 g-2 mb-5">
                     {
                         reviewsData.map(review => <SingleTestiomonial review={review} key={review._id}></SingleTestiomonial>)
                     }

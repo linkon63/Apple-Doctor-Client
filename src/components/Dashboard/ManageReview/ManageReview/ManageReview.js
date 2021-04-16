@@ -19,7 +19,12 @@ const ManageReview = () => {
         <div className='d-flex'>
             <DashboardNavbar></DashboardNavbar>
             <div className='container'>
-                <h1 className="text-center text-info mb-5"> <small>Manage User Reviews From Here : {reviews.length}</small> </h1>
+                <h1 className="text-center text-info mb-5"> <small>Manage User Reviews From Here : {reviews.length}</small> 
+                            {!reviews.length && <div className="spinner-grow text-center" role="status">
+                                    <span className="sr-only">Loading...</span>
+                                </div>
+                            }
+                </h1>
                 <div className='container row'>
                     {
                         reviews.map(review => <ShowingReview review={review} key={review._id}></ShowingReview>)
