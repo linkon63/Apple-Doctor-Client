@@ -7,7 +7,7 @@ import Apple4 from '../../../../Image/Apple (4).jpg';
 import Apple5 from '../../../../Image/Apple (5).jpg';
 import Apple6 from '../../../../Image/Apple (6).jpg';
 
-const Carasule = () => {
+const Carousels = () => {
     return (
     <Carousel>
         <Carousel.Item>
@@ -85,4 +85,4 @@ const Carasule = () => {
     );
 };
 
-export default Carasule;
+export default Carousels;

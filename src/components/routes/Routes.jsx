@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 // components
 import Home from '../Home/Home/Home';
-import Navber from '../Sheared/Navber/Navber/Navber';
+import TopNavbar from '../Sheared/Navbar/TopNavbar'
 import Footer from '../Sheared/Footer/Footer/Footer';
 import PrivateRoute from '../PrivateRoute/PrivateRoute';
 import OrderService from '../OrderService/OrderService/OrderService';
@@ -29,7 +29,7 @@ const Routes = () => {
                     <Home></Home>
                 </Route>
                 <Route path="/blog">
-                    <Navber />
+                    <TopNavbar />
                     <div className="container text-center mt-5 mb-5">
                         <h1>Welcome to Blog</h1>
                         <h1>This Page Under Building Goto DashBoard Or Login</h1>
@@ -40,7 +40,7 @@ const Routes = () => {
                     <OrderService></OrderService>
                 </PrivateRoute>
                 <Route path="/ourTeam">
-                    <Navber></Navber>
+                    <TopNavbar></TopNavbar>
                     <div className="container text-center mt-5 mb-5">
                         <h1>Welcome to Team</h1>
                         <h1>This Page Under Building Goto DashBoard Or Login</h1>

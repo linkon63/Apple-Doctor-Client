@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import { useParams } from 'react-router';
 import Footer from '../../Sheared/Footer/Footer/Footer';
-import Navber from '../../Sheared/Navber/Navber/Navber';
+import TopNavbar from '../../Sheared/Navbar/TopNavbar';
 import SingleOrder from '../SingleOrder/SingleOrder';
 
 const OrderService = () => {
@@ -23,7 +23,7 @@ const OrderService = () => {
 
     return (
         <div>
-            <Navber></Navber>
+            <TopNavbar />
             <SingleOrder orderService={orderService} key={orderService.id}></SingleOrder>
             <Footer></Footer>
         </div>
