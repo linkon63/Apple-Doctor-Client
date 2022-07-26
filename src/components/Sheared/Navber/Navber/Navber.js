@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { UserContext } from '../../../../App';
 import Logo from '../../../../Image/logo.jpg'
 const Navber = () => {
-    const [loogedInUser, setLoggedInUser] = useContext(UserContext);
+    const [loggedInUser] = useContext(UserContext);
     return (
         <nav className="navbar navbar-expand-lg navbar-light">
             <div className="container-fluid">
@@ -27,13 +27,13 @@ const Navber = () => {
                             <Link className="nav-link" to="/dashboard">Dashboard</Link>
                         </li>
                         {
-                            !loogedInUser.email &&
+                            !loggedInUser.email &&
                             <li className="nav-item m-3">
                                 <Link className="nav-link" to="/login">Login</Link>
                             </li>
                         }
                         {
-                            loogedInUser.email &&
+                            loggedInUser.email &&
                             <li className="nav-item m-3">
                                 <a className="nav-link" href='/home'>Logout</a>
                             </li>

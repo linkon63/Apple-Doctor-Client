@@ -29,7 +29,7 @@ const Routes = () => {
                     <Home></Home>
                 </Route>
                 <Route path="/blog">
-                    <Navber></Navber>
+                    <Navber />
                     <div className="container text-center mt-5 mb-5">
                         <h1>Welcome to Blog</h1>
                         <h1>This Page Under Building Goto DashBoard Or Login</h1>
