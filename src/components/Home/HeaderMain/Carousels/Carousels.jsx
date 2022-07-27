@@ -17,8 +17,9 @@ const Carousels = () => {
             alt="First slide"
             />
             <Carousel.Caption>
-            <h3 className='text-primary'>Repair Back Part {`&`} Glass</h3>
+           <h3 className='text-primary'>Repair Back Part {`&`} Glass</h3>
             <p>Send your device in for repair and have the repair at Apple Doctor fix it</p>
+            <button type="button" class="btn btn-primary btn-lg">Large button</button>
             </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
