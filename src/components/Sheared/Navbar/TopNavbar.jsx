@@ -14,7 +14,7 @@ const Navber = () => {
                 <div className=''>
                     <Link className="navbar-brand navbarText d-flex" to="/home">
                         <img className='img-fluid' src={Logo} alt="Apple-Doctor-Logo" style={{width: "36px", height: "36px"}} />
-                        <h6 className='m-2'>APPLE DOCTOR</h6>
+                        <h6 className='m-2'>DOCTOR</h6>
                     </Link>
                 </div>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,6 +30,12 @@ const Navber = () => {
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link active p-3" to="/ourTeam"><GroupWork />Team</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link active p-3" to="/ourTeam"><GroupWork />Repair</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link active p-3" to="/ourTeam"><GroupWork />Sell Device</Link>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link active p-3" to="/dashboard"><Dashboard />Dashboard</Link>
