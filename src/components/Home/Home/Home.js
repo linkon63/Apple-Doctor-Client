@@ -7,19 +7,20 @@ import Testimonilas from '../Testimonials/Testimonials/Testimonilas';
 import About from '../About/About';
 import ContactInfo from '../ContactInfo/ContactInfo';
 import Footer from '../../Sheared/Footer/Footer/Footer';
+import PagesLayout from '../../Layout/PagesLayout';
 
 
 const Home = () => {
     return (
         <>
-            <TopNavbar />
-            <HeaderMain></HeaderMain>
-            <Services></Services>
-            <ServiceDetails></ServiceDetails>
-            <Testimonilas></Testimonilas>
-            <About></About>
-            <ContactInfo></ContactInfo>
-            <Footer></Footer>
+            <PagesLayout >
+                <HeaderMain></HeaderMain>
+                <Services></Services>
+                <ServiceDetails></ServiceDetails>
+                <Testimonilas></Testimonilas>
+                <About></About>
+                <ContactInfo></ContactInfo>
+            </PagesLayout>
         </>
     );
 };

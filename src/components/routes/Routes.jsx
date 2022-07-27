@@ -6,8 +6,6 @@ import {
 } from "react-router-dom";
 // components
 import Home from '../Home/Home/Home';
-import TopNavbar from '../Sheared/Navbar/TopNavbar'
-import Footer from '../Sheared/Footer/Footer/Footer';
 import PrivateRoute from '../PrivateRoute/PrivateRoute';
 import OrderService from '../OrderService/OrderService/OrderService';
 import Login from '../Login/Login';
@@ -19,6 +17,8 @@ import Admin from '../Dashboard/Admin/Admin/Admin';
 import AllOrders from '../Dashboard/AllOrders/AllOrders/AllOrders';
 import ManageContact from '../Dashboard/ManageContact/ManageContact';
 import Dashboard from '../Dashboard/Dashboard/Dashboard';
+import Blog from '../Blog/Blog';
+import Team from '../Team/Team';
 
 const Routes = () => {
 
@@ -29,23 +29,13 @@ const Routes = () => {
                     <Home></Home>
                 </Route>
                 <Route path="/blog">
-                    <TopNavbar />
-                    <div className="container text-center mt-5 mb-5">
-                        <h1>Welcome to Blog</h1>
-                        <h1>This Page Under Building Goto DashBoard Or Login</h1>
-                    </div>
-                    <Footer></Footer>
+                    <Blog />
                 </Route>
                 <PrivateRoute path="/orderService/:id">
                     <OrderService></OrderService>
                 </PrivateRoute>
                 <Route path="/ourTeam">
-                    <TopNavbar></TopNavbar>
-                    <div className="container text-center mt-5 mb-5">
-                        <h1>Welcome to Team</h1>
-                        <h1>This Page Under Building Goto DashBoard Or Login</h1>
-                    </div>
-                    <Footer></Footer>
+                   <Team />
                 </Route>
                 <Route path="/login">
                     <Login></Login>
