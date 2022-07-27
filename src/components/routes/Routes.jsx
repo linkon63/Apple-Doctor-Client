@@ -19,6 +19,7 @@ import Admin from '../Dashboard/Admin/Admin/Admin';
 import AllOrders from '../Dashboard/AllOrders/AllOrders/AllOrders';
 import ManageContact from '../Dashboard/ManageContact/ManageContact';
 import Dashboard from '../Dashboard/Dashboard/Dashboard';
+import Blog from '../Blog/Blog';
 
 const Routes = () => {
 
@@ -29,12 +30,7 @@ const Routes = () => {
                     <Home></Home>
                 </Route>
                 <Route path="/blog">
-                    <TopNavbar />
-                    <div className="container text-center mt-5 mb-5">
-                        <h1>Welcome to Blog</h1>
-                        <h1>This Page Under Building Goto DashBoard Or Login</h1>
-                    </div>
-                    <Footer></Footer>
+                    <Blog />
                 </Route>
                 <PrivateRoute path="/orderService/:id">
                     <OrderService></OrderService>
