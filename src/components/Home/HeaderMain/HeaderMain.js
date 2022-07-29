@@ -1,6 +1,5 @@
 import React from 'react';
 import Carousels from './Carousels/Carousels';
-import './HeaderMain.css';
 const HeaderMain = () => {
 
     return (
