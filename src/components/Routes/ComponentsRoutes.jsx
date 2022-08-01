@@ -5,6 +5,7 @@ import Blog from '../Blog/Blog'
 import OrderService from '../OrderService/OrderService/OrderService';
 import Team from '../Team/Team';
 import Login from '../Login/Login';
+import YourServiceOrder from '../Dashboard/YourServiceOrder/YourServiceOrder';
 const ComponentsRoutes = () => {
     return (
         <div>
@@ -15,6 +16,7 @@ const ComponentsRoutes = () => {
                 <Route path="/orderService/:id" element={<OrderService />} />
                 <Route path="/ourTeam" element={<Team />} />
                 <Route path="/login" element={<Login />} />
+                <Route path="/dashboard/services" element={<YourServiceOrder />} />
             </Routes>
         </div>
     );
