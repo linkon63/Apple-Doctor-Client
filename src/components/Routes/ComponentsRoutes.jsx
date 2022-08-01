@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from '../Home/Home/Home'
 import Blog from '../Blog/Blog'
 import OrderService from '../OrderService/OrderService/OrderService';
+import Team from '../Team/Team';
 const ComponentsRoutes = () => {
     return (
         <div>
@@ -10,7 +11,8 @@ const ComponentsRoutes = () => {
                 <Route path="/" element={<Home />} />
                 <Route path="home" element={<Home />} />
                 <Route path="/blog" element={<Blog />} />
-                <Route path="/blog" element={<OrderService />} />
+                <Route path="/orderService/:id" element={<OrderService />} />
+                <Route path="/ourTeam" element={<Team />} />
             </Routes>
         </div>
     );
