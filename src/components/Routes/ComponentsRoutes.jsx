@@ -12,6 +12,7 @@ import AddServices from '../Dashboard/AddServices/AddServices/AddServices';
 import Admin from '../Dashboard/Admin/Admin/Admin';
 import AllOrders from '../Dashboard/AllOrders/AllOrders/AllOrders';
 import ManageContact from '../Dashboard/ManageContact/ManageContact';
+import Dashboard from '../Dashboard/Dashboard/Dashboard';
 const ComponentsRoutes = () => {
     return (
         <div>
@@ -29,6 +30,7 @@ const ComponentsRoutes = () => {
                 <Route path="/dashboard/admin" element={<Admin />} />
                 <Route path="/dashboard/allOrders" element={<AllOrders />} />
                 <Route path="/dashboard/showContactUsData" element={<ManageContact />} />
+                <Route path="/dashboard" element={<Dashboard />} />
             </Routes>
         </div>
     );
