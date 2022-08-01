@@ -4,6 +4,7 @@ import Home from '../Home/Home/Home'
 import Blog from '../Blog/Blog'
 import OrderService from '../OrderService/OrderService/OrderService';
 import Team from '../Team/Team';
+import Login from '../Login/Login';
 const ComponentsRoutes = () => {
     return (
         <div>
@@ -13,6 +14,7 @@ const ComponentsRoutes = () => {
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/orderService/:id" element={<OrderService />} />
                 <Route path="/ourTeam" element={<Team />} />
+                <Route path="/login" element={<Login />} />
             </Routes>
         </div>
     );
