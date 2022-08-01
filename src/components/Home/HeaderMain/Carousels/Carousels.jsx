@@ -5,8 +5,8 @@ import Apple2 from '../../../../Image/mickchange.jpg';
 import Apple3 from '../../../../Image/motherbord.jpg';
 import Apple4 from '../../../../Image/backpart.jpg';
 import Apple5 from '../../../../Image/cameraRepaire.jpg';
-// import './Carousel.css'
-import './Carousel.scss'
+import './Carousel.css'
+// import './Carousel.scss'
 const Carousels = () => {
     return (
         <Carousel>
