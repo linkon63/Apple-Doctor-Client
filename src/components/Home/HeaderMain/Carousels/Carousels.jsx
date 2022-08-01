@@ -1,11 +1,12 @@
 import React from 'react';
-import { Button, Carousel } from 'react-bootstrap';
+import { Carousel } from 'react-bootstrap';
 import Apple from '../../../../Image/displayRepaire.jpg';
 import Apple2 from '../../../../Image/mickchange.jpg';
 import Apple3 from '../../../../Image/motherbord.jpg';
 import Apple4 from '../../../../Image/backpart.jpg';
 import Apple5 from '../../../../Image/cameraRepaire.jpg';
-import './Carousel.css'
+// import './Carousel.css'
+import './Carousel.scss'
 const Carousels = () => {
     return (
         <Carousel>
