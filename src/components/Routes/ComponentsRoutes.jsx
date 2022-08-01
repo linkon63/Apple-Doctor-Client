@@ -11,6 +11,7 @@ import ManageReview from '../Dashboard/ManageReview/ManageReview/ManageReview';
 import AddServices from '../Dashboard/AddServices/AddServices/AddServices';
 import Admin from '../Dashboard/Admin/Admin/Admin';
 import AllOrders from '../Dashboard/AllOrders/AllOrders/AllOrders';
+import ManageContact from '../Dashboard/ManageContact/ManageContact';
 const ComponentsRoutes = () => {
     return (
         <div>
@@ -27,6 +28,7 @@ const ComponentsRoutes = () => {
                 <Route path="/dashboard/addServices" element={<AddServices />} />
                 <Route path="/dashboard/admin" element={<Admin />} />
                 <Route path="/dashboard/allOrders" element={<AllOrders />} />
+                <Route path="/dashboard/showContactUsData" element={<ManageContact />} />
             </Routes>
         </div>
     );
