@@ -7,6 +7,7 @@ import Team from '../Team/Team';
 import Login from '../Login/Login';
 import YourServiceOrder from '../Dashboard/YourServiceOrder/YourServiceOrder';
 import AddReview from '../Dashboard/AddReview/AddReview/AddReview';
+import ManageReview from '../Dashboard/ManageReview/ManageReview/ManageReview';
 const ComponentsRoutes = () => {
     return (
         <div>
@@ -19,6 +20,7 @@ const ComponentsRoutes = () => {
                 <Route path="/login" element={<Login />} />
                 <Route path="/dashboard/services" element={<YourServiceOrder />} />
                 <Route path="/dashboard/review" element={<AddReview />} />
+                <Route path="/dashboard/manageReview" element={<ManageReview />} />
             </Routes>
         </div>
     );
