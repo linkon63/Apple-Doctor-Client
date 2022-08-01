@@ -1,5 +1,6 @@
 import { createContext, useState } from 'react';
-import Routes from './components/routes/Routes';
+import ComponentsRoutes from './components/Routes/ComponentsRoutes';
+
 
 export const UserContext = createContext();
 
@@ -8,7 +9,7 @@ function App() {
 
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
-      <Routes />
+      <ComponentsRoutes />
     </UserContext.Provider>
   );
 }

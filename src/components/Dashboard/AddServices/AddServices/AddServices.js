@@ -1,14 +1,14 @@
 import React from 'react';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { useHistory } from 'react-router';
+// import { useHistory } from 'react-router';
 import DashboardNavbar from '../../DashboardNavber/DashboardNavber/DashboardNavbar';
 import axios from 'axios';
 import ShowingServices from '../ShowingServices/ShowingServices';
 
 const AddServices = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
-    let history = useHistory();
+    let history = "" // useHistory();
     const [imageURL, setImageURl] = useState(null);
 
     const onSubmit = data => {

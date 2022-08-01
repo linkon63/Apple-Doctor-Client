@@ -2,14 +2,14 @@ import React from 'react';
 import { useState } from 'react';
 import { useContext } from 'react';
 import { useForm } from "react-hook-form";
-import { useHistory } from 'react-router';
+// import { useHistory } from 'react-router';
 import { UserContext } from '../../../../App';
 
 const ReviewFrom = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [addReview, setAddReview] = useState([]);
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
-    let history = useHistory();
+    let history = "" // useHistory();
     const onSubmit = data => {
         const reviewData = {
             name: data.name,

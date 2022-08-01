@@ -5,7 +5,7 @@ import { useHistory } from 'react-router';
 import './ContactInfo.css'
 const ContactInfo = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
-    let history = useHistory();
+    let history = "" // useHistory();
 
     const onSubmit = data => {
         console.log(data);

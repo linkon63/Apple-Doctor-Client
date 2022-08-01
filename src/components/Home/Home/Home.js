@@ -9,22 +9,20 @@ import ContactInfo from '../ContactInfo/ContactInfo';
 import Footer from '../../Sheared/Footer/Footer/Footer';
 
 // page layout dose not work for dom@6
-// import PagesLayout from '../../Layout/PagesLayout';
+import PagesLayout from '../../Layout/PagesLayout';
 
 
 const Home = () => {
     return (
 
-        <div>
-            <TopNavbar />
+        <PagesLayout>
             <HeaderMain></HeaderMain>
             <Services></Services>
             <ServiceDetails></ServiceDetails>
             <Testimonilas></Testimonilas>
             <About></About>
             <ContactInfo></ContactInfo>
-            <Footer />
-        </div>
+        </PagesLayout>
     );
 };
 

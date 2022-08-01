@@ -9,7 +9,7 @@ import Payment from '../Payment/Payment';
 
 
 const SingleOrder = ({ orderService }) => {
-    let history = useHistory();
+    let history = "" //useHistory();
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     console.log(loggedInUser);
     const [shippingData, setShippingData] = useState(null)

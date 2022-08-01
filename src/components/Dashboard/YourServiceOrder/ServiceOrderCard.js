@@ -2,7 +2,7 @@ import React from 'react';
 import { useHistory, useParams } from 'react-router';
 
 const ServiceOrderCard = ({ order }) => {
-    let history = useHistory();
+    let history = "" //useHistory();
 
     //Cancel Order
     const orderCancel = id => {

@@ -1,8 +1,8 @@
 import React from 'react';
-import { useHistory } from 'react-router';
+// import { useHistory } from 'react-router';
 
 const OrderShowing = ({ order }) => {
-    const history = useHistory();
+    const history = "" // useHistory();
 
     const handleDelete = (id) => {
         console.log(id);

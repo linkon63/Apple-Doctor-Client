@@ -1,11 +1,11 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
-import { useHistory } from 'react-router';
+// import { useHistory } from 'react-router';
 
 const ShowingServices = () => {
     const [services, setServices] = useState([]);
-    const history = useHistory();
+    const history = "" //useHistory();
     useEffect(() => {
         fetch('https://apple-doctor-server.herokuapp.com/allServices')
             .then(res => res.json())

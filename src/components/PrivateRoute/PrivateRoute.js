@@ -7,7 +7,7 @@ const PrivateRoute = ({ children, ...rest }) => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     return (
         <div>
-                <Route
+            {/* <Route
                 {...rest}
                 render={({ location }) =>
                 (loggedInUser.email )? (
@@ -20,8 +20,9 @@ const PrivateRoute = ({ children, ...rest }) => {
                         }}
                     />
                     )
-                }
+                } 
                 />
+                */}
         </div>
     );
 };

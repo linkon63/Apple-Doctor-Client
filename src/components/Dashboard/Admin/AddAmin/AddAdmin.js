@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { useContext } from 'react';
 import { useForm } from 'react-hook-form';
-import { useHistory } from 'react-router';
+// import { useHistory } from 'react-router';
 import { UserContext } from '../../../../App';
 import ShowAdmin from './ShowAdmin';
 
@@ -10,7 +10,7 @@ const AddAdmin = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
-    let history = useHistory();
+    let history = "" //useHistory();
 
     const onSubmit = data => {
         console.log(data);

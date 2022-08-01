@@ -3,7 +3,7 @@ import { useHistory, useParams } from 'react-router';
 
 const ShowingReview = ({ review }) => {
 
-    const history = useHistory();
+    const history = "" //useHistory();
 
     const handleDelete = (id) => {
         console.log('handle Delete', id);
