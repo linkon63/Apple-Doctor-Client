@@ -8,6 +8,7 @@ import Login from '../Login/Login';
 import YourServiceOrder from '../Dashboard/YourServiceOrder/YourServiceOrder';
 import AddReview from '../Dashboard/AddReview/AddReview/AddReview';
 import ManageReview from '../Dashboard/ManageReview/ManageReview/ManageReview';
+import AddServices from '../Dashboard/AddServices/AddServices/AddServices';
 const ComponentsRoutes = () => {
     return (
         <div>
@@ -21,6 +22,7 @@ const ComponentsRoutes = () => {
                 <Route path="/dashboard/services" element={<YourServiceOrder />} />
                 <Route path="/dashboard/review" element={<AddReview />} />
                 <Route path="/dashboard/manageReview" element={<ManageReview />} />
+                <Route path="/dashboard/addServices" element={<AddServices />} />
             </Routes>
         </div>
     );
