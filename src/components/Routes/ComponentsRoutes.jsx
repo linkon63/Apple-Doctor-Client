@@ -13,6 +13,7 @@ import Admin from '../Dashboard/Admin/Admin/Admin';
 import AllOrders from '../Dashboard/AllOrders/AllOrders/AllOrders';
 import ManageContact from '../Dashboard/ManageContact/ManageContact';
 import Dashboard from '../Dashboard/Dashboard/Dashboard';
+// import RequireAuth from '../PrivateRoute/RequireAuth';
 const ComponentsRoutes = () => {
     return (
         <div>
@@ -20,7 +21,7 @@ const ComponentsRoutes = () => {
                 <Route path="/" element={<Home />} />
                 <Route path="home" element={<Home />} />
                 <Route path="/blog" element={<Blog />} />
-                <Route path="/orderService/:id" element={<OrderService />} />
+                <Route path="/orderService/:id" element={  <OrderService></OrderService>} />
                 <Route path="/ourTeam" element={<Team />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/dashboard/services" element={<YourServiceOrder />} />

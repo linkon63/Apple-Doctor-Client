@@ -1,0 +1,241 @@
+$searchBoxDisplay: flex;
+$searchBoxJustifyContent: center;
+
+.search-box {
+    display: $searchBoxDisplay;
+    justify-content: $searchBoxJustifyContent;
+}
+
+$searchFontFamily: fangsong;
+$searchBorderRadius: 7px;
+$searchWidth: 61%;
+$searchHeight: 63px;
+$searchPadding: 14px;
+$searchFontSize: 38px;
+
+.search {
+    font-family: $searchFontFamily;
+    border-radius: $searchBorderRadius;
+    width: $searchWidth;
+    padding: $searchPadding;
+    height: $searchHeight;
+    font-size: $searchFontSize;
+
+}
+
+$listPadding: 0px;
+$listMarginTop: 63px;
+$listListStyleType: none;
+$listTextAlign: center;
+
+.list {
+    padding: $listPadding;
+    margin-top: $listMarginTop;
+    list-style-type: $listListStyleType;
+    text-align: $listTextAlign;
+}
+
+$listItemMarginBottom: 20px;
+$ListItemFontSize: 25px;
+$listItemColor: #444;
+$listFontWeight: 300;
+
+.listItem {
+    margin-bottom: $listItemMarginBottom;
+    font-size: $ListItemFontSize;
+    color: $listItemColor;
+    font-weight: $listFontWeight;
+}
+
+$tabsMinHeight: auto;
+$tabsBoxSizing: border-box;
+$tabsFontFamily: 'Montserrat', sans-serif;
+$tabsLineHeight: 1.5;
+$tabsMaxWidth: 960px;
+$tabsMargin: 0 auto;
+
+.tabs {
+    min-height: $tabsMinHeight;
+    box-sizing: $tabsBoxSizing;
+    font-family: $tabsFontFamily;
+    line-height: $tabsLineHeight;
+    max-width: $tabsMaxWidth;
+    margin: $tabsMargin;
+}
+
+$boxDisplay: flex;
+$boxFlexWrap: wrap;
+$boxAlignItems: center;
+$boxJustifyContent: center;
+$boxFlexDirection: row;
+$boxAlignContent: flex-start;
+
+.box {
+    display: $boxDisplay;
+    flex-wrap: $boxFlexWrap;
+    align-items: $boxAlignItems;
+    justify-content: $boxJustifyContent;
+    flex-direction: $boxFlexDirection;
+    align-content: $boxAlignContent;
+}
+
+$labelFontSize: xx-large;
+$labelFontFamily: fangsong;
+$labelPadding: 10px 16px;
+$labelCursor: pointer;
+$labelJustifyContent: center;
+
+.tabs__label {
+    font-size: $labelFontSize;
+    font-family: $labelFontFamily;
+    padding: $labelPadding;
+    cursor: $labelCursor;
+    justify-content: $labelJustifyContent;
+
+}
+
+$radioDisplay: none;
+
+.tabs__radio {
+    display: $radioDisplay;
+
+}
+
+$contentOrder: 1;
+$contentWidth: 100%;
+$contentBorderBottom: 3px solid #dddddd;
+$contentLineHeight: 1.5;
+$contentFontSize: 0.9em;
+$contentDisplay: none;
+
+.tabs__content {
+    order: $contentOrder;
+    width: $contentWidth;
+    border-bottom: $contentBorderBottom;
+    line-height: $contentLineHeight;
+    font-size: $contentFontSize;
+    display: $contentDisplay;
+}
+
+$liFontFamily: fangsong;
+$liListStyleType: none;
+$liColor: seagreen;
+$textAlign: center;
+$liFontSize: 20px;
+
+.tabs__content li {
+
+    font-family: $liFontFamily;
+    list-style-type: $liListStyleType;
+    color: $liColor;
+    text-align: $textAlign;
+    font-size: $liFontSize;
+
+}
+
+$checkFontWeight: bold;
+$checkColor: #009578;
+$checkBorderBottom: 2px solid #009578;
+
+.tabs__radio:checked+.tabs__label {
+    font-weight: $checkFontWeight;
+    color: $checkColor;
+    border-bottom: $checkBorderBottom;
+}
+
+$clickTabDisplay: initial;
+
+.tabs__radio:checked+.tabs__label+.tabs__content {
+    display: $clickTabDisplay;
+
+}
+
+$wrapperDisplay: grid;
+$wrapperGridTemplateColumns: auto auto auto;
+$wrapperAlignContent: center;
+$wrapperJustifyContent: space-between;
+$wrapperAlignItems: center;
+$wrapperJustifyItems: center;
+$wrapperBorderTop: outset;
+$wrapperMargin: 20px;
+$wrapperGridGap: 15px;
+
+.content-wrapper {
+    display: $wrapperDisplay;
+    grid-template-columns: $wrapperGridTemplateColumns;
+    align-content: $wrapperAlignContent;
+    justify-content: $wrapperJustifyContent;
+    align-items: $wrapperAlignItems;
+    justify-items: $wrapperJustifyItems;
+    border-top: $wrapperBorderTop;
+    margin: $wrapperMargin;
+    grid-gap: $wrapperGridGap;
+}
+
+$contentStyleDisplay: flex;
+
+.contentStyle {
+    display: $contentStyleDisplay;
+}
+
+$divStyleMargin: 0px;
+
+
+.div-style {
+    margin: $divStyleMargin;
+}
+
+$imgWidth: 70px;
+$imgHeight: 70px;
+
+.div-style img {
+    width: $imgWidth;
+    height: $imgHeight;
+}
+
+$HFontFamily: fangsong;
+$HTextAlign: center;
+$HFontSize: 20px;
+
+.div-style h2 {
+    font-family: $HFontFamily;
+    text-align: $HTextAlign;
+    font-size: $HFontSize;
+}
+
+
+
+$smHeadingFontSize:20px;
+
+$smSearchFontSize:20px;
+$smSearchWidth:91%;
+$smSearchHeight:50px;
+
+$smTabsMinHeight: auto;
+
+$smTabsFontSize: larger;
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 576.98px) {
+
+    .heading {
+        font-size: $smHeadingFontSize;
+    }
+
+    .search {
+        font-size: $smSearchFontSize;
+        width: $smSearchWidth;
+        height: $smSearchHeight;
+
+    }
+
+    .tabs {
+        min-height: $smTabsMinHeight;
+    }
+
+    .tabs__label {
+        font-size: $smTabsFontSize;
+
+    }
+
+}

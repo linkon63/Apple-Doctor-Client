@@ -10,6 +10,7 @@ import Footer from '../../Sheared/Footer/Footer/Footer';
 
 // page layout dose not work for dom@6
 import PagesLayout from '../../Layout/PagesLayout';
+import ChoiceProduct from '../HeaderMain/ChoiceProduct/ChoiceProduct';
 
 
 const Home = () => {
@@ -17,6 +18,7 @@ const Home = () => {
 
         <PagesLayout>
             <HeaderMain></HeaderMain>
+            <ChoiceProduct></ChoiceProduct>
             <Services></Services>
             <ServiceDetails></ServiceDetails>
             <Testimonilas></Testimonilas>
