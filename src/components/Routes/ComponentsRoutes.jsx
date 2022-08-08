@@ -19,19 +19,19 @@ const ComponentsRoutes = () => {
     return (
         <div>
             <Routes>
+                {/* Public component */}
                 <Route path="/" element={<Home />} />
                 <Route path="home" element={<Home />} />
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/ourTeam" element={<Team />} />
+                {/* Login component */}
                 <Route path="/login" element={<Login />} />
-
+                {/* Dashboard Component */}
                 <Route path="/dashboard" element={
                     <RequireAuth>
                         <Dashboard />
                     </RequireAuth>
                 } />
-
-
                 <Route path="/orderService/:id" element={<OrderService></OrderService>} />
                 <Route path="/dashboard/services" element={<YourServiceOrder />} />
                 <Route path="/dashboard/review" element={<AddReview />} />
