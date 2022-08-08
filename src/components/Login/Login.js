@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useHistory, useLocation } from 'react-router-dom';
+import { Link, Navigate, useHistory, useLocation, useNavigate } from 'react-router-dom';
 import firebase from "firebase/app";
 import "firebase/auth";
 import "firebase/firestore";
@@ -11,15 +11,13 @@ if (firebase.apps.length === 0) {
     firebase.initializeApp(firebaseConfig);
 }
 const Login = () => {
-
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
-
-    const history = "" //useHistory();
-    const location = useLocation();
-    const { from } = location.state || { from: { pathname: "/" } };
+    let navigate = useNavigate();
+    let location = useLocation();
+    let from = location.state?.from?.pathname || "/";
 
     const handleGoogleSignIn = () => {
-        console.log('handle Google SIgn In');
+        console.log('Google sign in', location);
         var provider = new firebase.auth.GoogleAuthProvider();
         firebase.auth()
             .signInWithPopup(provider)
@@ -28,7 +26,7 @@ const Login = () => {
                 setLoggedInUser(user);
                 console.log(user)
                 setUserToken();
-                history.replace(from);
+                navigate(from, { replace: true });
             }).catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
@@ -46,17 +44,17 @@ const Login = () => {
         <div className="row">
             <div className="col-md-6">
                 <div className="container mt-5 pt-5">
-                <div className="card text-center mt-5 p-5">
-                    <div className="card-header bg-success text-dark">
-                       <strong> Please Login for Submit your Order</strong>
+                    <div className="card text-center mt-5 p-5">
+                        <div className="card-header bg-success text-dark">
+                            <strong> Please Login for Submit your Order</strong>
                         </div>
-                    <div className="card-body">
-                        <h5 className="card-title">Welcome to login page sir</h5>
-                        <p className="card-text">Do not cancel login page without login</p>
-                        <button onClick={handleGoogleSignIn} className='btn btn-dark'> <Android></Android> Sign in with Google</button>
+                        <div className="card-body">
+                            <h5 className="card-title">Welcome to login page sir</h5>
+                            <p className="card-text">Do not cancel login page without login</p>
+                            <button onClick={handleGoogleSignIn} className='btn btn-dark'> <Android></Android> Sign in with Google</button>
+                        </div>
                     </div>
                 </div>
-            </div>
             </div>
             <div className="col-md-6">
                 <div className="container mt-5 pt-5">

@@ -1,15 +1,21 @@
-import React from 'react';
-import { useAuthState } from 'react-firebase-hooks/auth';
+import React, { useContext } from 'react';
+import { useEffect } from 'react';
 import { Navigate, useLocation } from 'react-router-dom';
-import auth from '../../firebase.init';
+import { UserContext } from '../../App';
 
-const RequireAuth = ({children}) => {
-    const [user] = useAuthState(auth);
+
+const RequireAuth = ({ children }) => {
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const location = useLocation();
 
-    
+    useEffect(() => {
+        console.log("Private Route Components")
+        console.log("Private Route location", location.pathname)
+        console.log("loggedInUser", loggedInUser.email)
+    }, [])
 
-    if (!user) {
+
+    if (!loggedInUser.email) {
         return <Navigate to="/login" state={{ from: location }} replace></Navigate>
     }
     return children;
