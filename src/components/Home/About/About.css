@@ -1,0 +1,479 @@
+.about-flex-box{
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: space-evenly;
+    padding-left: 25px;
+}
+.about-flex-box .box{
+width: 350px;
+}
+
+
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 576.98px) {
+    section img{
+        width: 100%;
+        padding: 2%;
+    }
+    .about-head-content{
+        box-sizing: border-box;
+        width: 980px;
+        width: 817px;
+        word-wrap: break-word;
+        text-align: center;
+    }
+    .paragraph-aboutHeader{
+        margin: 0 auto;
+        margin-top: 16px;
+        font-size: 22px;
+        line-height: 1.454545;
+        font-weight: 300;
+        letter-spacing: .016em;
+        font-family: fangsong;
+        max-width: 43.25rem;
+    }
+    .about-flex-box{
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 0px;
+        justify-content: space-between;
+        margin: 18px;
+    }
+    .about-flex-box .box{
+    width: 250px;
+    }
+    .about-flex-box .box img{
+    width: 150px;
+    }
+     h2{
+        font-size: 32px;
+        line-height: 1.09375;
+        font-weight: 500;
+        letter-spacing: .011em;
+        font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+    }
+    
+    p{
+        font-size: 20px;
+        line-height: 1.454545;
+        font-weight: 300;
+        letter-spacing: .016em;
+    }
+    .flexBox-button{
+      text-align: center;
+      padding: 46px;
+    }
+    .flexBox-button-link{
+      text-align: center;
+    }
+    .flexBox-button a{
+        color: white;
+        background: #6bf;
+        padding: 6px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 17px;
+        line-height: 1.5294717647;
+        font-weight: 400;
+        letter-spacing: -0.021em;
+        font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+    }
+    .bottom{
+        margin-bottom: 1%;
+        border-bottom: 2px solid #ddd;
+        padding: 4px;}
+    .other-repair{
+        width: 960px;
+        text-align: center;
+    }
+    .about-paragraph{
+        width: 80%;
+        margin: 0 150px;
+        padding: 2%;
+    }
+    .paragraph-link{
+        text-decoration: none;
+        color:blue;
+    }
+    .paragraph-link:hover{
+        text-decoration: underline;
+    }
+    
+    
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 576px) {
+    section img{
+        width: 100%;
+        padding: 2%;
+    }
+    .about-head-content{
+        box-sizing: border-box;
+        width: 980px;
+        width: 817px;
+        word-wrap: break-word;
+        text-align: center;
+    }
+    .paragraph-aboutHeader{
+        margin: 0 auto;
+        margin-top: 16px;
+        font-size: 22px;
+        line-height: 1.454545;
+        font-weight: 300;
+        letter-spacing: .016em;
+        font-family: fangsong;
+        max-width: 43.25rem;
+    }
+    .about-flex-box{
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 0px;
+        justify-content: space-between;
+        margin: 18px;
+    }
+    .about-flex-box .box{
+    width: 250px;
+    }
+    .about-flex-box .box img{
+    width: 150px;
+    }
+     h2{
+        font-size: 32px;
+        line-height: 1.09375;
+        font-weight: 500;
+        letter-spacing: .011em;
+        font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+    }
+    
+    p{
+        font-size: 20px;
+        line-height: 1.454545;
+        font-weight: 300;
+        letter-spacing: .016em;
+    }
+    .flexBox-button{
+      text-align: center;
+      padding: 46px;
+    }
+    .flexBox-button-link{
+      text-align: center;
+    }
+    .flexBox-button a{
+        color: white;
+        background: #6bf;
+        padding: 6px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 17px;
+        line-height: 1.5294717647;
+        font-weight: 400;
+        letter-spacing: -0.021em;
+        font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+    }
+    .bottom{
+        margin-bottom: 1%;
+        border-bottom: 2px solid #ddd;
+        padding: 4px;}
+    .other-repair{
+        width: 960px;
+        text-align: center;
+    }
+    .about-paragraph{
+        width: 80%;
+        margin: 0 150px;
+        padding: 2%;
+    }
+    .paragraph-link{
+        text-decoration: none;
+        color:blue;
+    }
+    .paragraph-link:hover{
+        text-decoration: underline;
+    }
+    
+    
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    section img{
+        width: 100%;
+        padding: 2%;
+    }
+    .about-head-content{
+        box-sizing: border-box;
+        width: 980px;
+        width: 817px;
+        word-wrap: break-word;
+        text-align: center;
+    }
+    .paragraph-aboutHeader{
+        margin: 0 auto;
+        margin-top: 16px;
+        font-size: 22px;
+        line-height: 1.454545;
+        font-weight: 300;
+        letter-spacing: .016em;
+        font-family: fangsong;
+        max-width: 43.25rem;
+    }
+    .about-flex-box{
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 65px;
+        justify-content: center;
+    }
+    .about-flex-box .box{
+    width: 300px;
+    }
+    .about-flex-box .box img{
+    width: 150px;
+    }
+     h2{
+        font-size: 32px;
+        line-height: 1.09375;
+        font-weight: 500;
+        letter-spacing: .011em;
+        font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+    }
+    
+    p{
+        font-size: 20px;
+        line-height: 1.454545;
+        font-weight: 300;
+        letter-spacing: .016em;
+    }
+    .flexBox-button{
+      text-align: center;
+      padding: 46px;
+    }
+    .flexBox-button-link{
+      text-align: center;
+    }
+    .flexBox-button a{
+        color: white;
+        background: #6bf;
+        padding: 6px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 17px;
+        line-height: 1.5294717647;
+        font-weight: 400;
+        letter-spacing: -0.021em;
+        font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+    }
+    .bottom{
+        margin-bottom: 1%;
+        border-bottom: 2px solid #ddd;
+        padding: 4px;}
+    .other-repair{
+        width: 960px;
+        text-align: center;
+    }
+    .about-paragraph{
+        width: 80%;
+        margin: 0 150px;
+        padding: 2%;
+    }
+    .paragraph-link{
+        text-decoration: none;
+        color:blue;
+    }
+    .paragraph-link:hover{
+        text-decoration: underline;
+    }
+    
+    
+
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    section img{
+        width: 100%;
+        padding: 2%;
+    }
+    .about-head-content{
+        box-sizing: border-box;
+        width: 980px;
+        width: 817px;
+        word-wrap: break-word;
+        text-align: center;
+    }
+    .paragraph-aboutHeader{
+        margin: 0 auto;
+        margin-top: 16px;
+        font-size: 22px;
+        line-height: 1.454545;
+        font-weight: 300;
+        letter-spacing: .016em;
+        font-family: fangsong;
+        max-width: 43.25rem;
+    }
+    .about-flex-box{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 35px;
+        justify-content: center;
+    }
+    .about-flex-box .box{
+    width: 300px;
+    }
+    .about-flex-box .box img{
+    width: 150px;
+    }
+     h2{
+        font-size: 32px;
+        line-height: 1.09375;
+        font-weight: 500;
+        letter-spacing: .011em;
+        font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+    }
+    
+    p{
+        font-size: 20px;
+        line-height: 1.454545;
+        font-weight: 300;
+        letter-spacing: .016em;
+    }
+    .flexBox-button{
+      text-align: center;
+      padding: 46px;
+    }
+    .flexBox-button-link{
+      text-align: center;
+    }
+    .flexBox-button a{
+        color: white;
+        background: #6bf;
+        padding: 6px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 17px;
+        line-height: 1.5294717647;
+        font-weight: 400;
+        letter-spacing: -0.021em;
+        font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+    }
+    .bottom{
+        margin-bottom: 1%;
+        border-bottom: 2px solid #ddd;
+        padding: 4px;}
+    .other-repair{
+        width: 960px;
+        text-align: center;
+    }
+    .about-paragraph{
+        width: 80%;
+        margin: 0 150px;
+        padding: 2%;
+    }
+    .paragraph-link{
+        text-decoration: none;
+        color:blue;
+    }
+    .paragraph-link:hover{
+        text-decoration: underline;
+    }
+    
+    
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    section img{
+        width: 100%;
+        padding: 2%;
+    }
+    .about-head-content{
+        box-sizing: border-box;
+        width: 980px;
+        width: 817px;
+        word-wrap: break-word;
+        text-align: center;
+    }
+    .paragraph-aboutHeader{
+        margin: 0 auto;
+        margin-top: 16px;
+        font-size: 22px;
+        line-height: 1.454545;
+        font-weight: 300;
+        letter-spacing: .016em;
+        font-family: fangsong;
+        max-width: 43.25rem;
+    }
+    .about-flex-box{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 100px;
+        justify-content: center;
+    }
+    .about-flex-box .box{
+    width: 300px;
+    }
+    .about-flex-box .box img{
+    width: 150px;
+    }
+     h2{
+        font-size: 32px;
+        line-height: 1.09375;
+        font-weight: 500;
+        letter-spacing: .011em;
+        font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+    }
+    
+    p{
+        font-size: 20px;
+        line-height: 1.454545;
+        font-weight: 300;
+        letter-spacing: .016em;
+    }
+    .flexBox-button{
+      text-align: center;
+      padding: 46px;
+    }
+    .flexBox-button-link{
+      text-align: center;
+    }
+    .flexBox-button a{
+        color: white;
+        background: #6bf;
+        padding: 6px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 17px;
+        line-height: 1.5294717647;
+        font-weight: 400;
+        letter-spacing: -0.021em;
+        font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+    }
+    .bottom{
+        margin-bottom: 1%;
+        border-bottom: 2px solid #ddd;
+        padding: 4px;}
+    .other-repair{
+        width: 960px;
+        text-align: center;
+    }
+    .about-paragraph{
+        width: 80%;
+        margin: 0 150px;
+        padding: 2%;
+    }
+    .paragraph-link{
+        text-decoration: none;
+        color:blue;
+    }
+    .paragraph-link:hover{
+        text-decoration: underline;
+    }
+    
+    
+   
+}

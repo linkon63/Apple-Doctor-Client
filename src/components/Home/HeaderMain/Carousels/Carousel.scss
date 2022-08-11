@@ -1,65 +1,30 @@
-
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 576.98px) {
-    .carousel-caption {
-        position: absolute !important;
-        top: -10% !important;
-        left: -0px !important;
-        z-index: 10 !important;
-        text-align: center !important;
-    } .carousel-caption h3{
-        font-size: 12px;
-        font-weight: bold;
-    } .carousel-caption p{
-        font-size: 7px;
-        line-height: 5px;
-    }
+// @media only screen and (max-width: 576.98px) {
+  
 
-}
+// }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 576px) {
-    .carousel-caption {
-        position: absolute !important;
-        top: -8% !important;
-        left: -0px !important;
-        z-index: 10 !important;
-        text-align: center !important;
-        font-size: small;
-    }
-}
+// @media only screen and (min-width: 576px) {
+
+// }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-    .carousel-caption {
-        position: absolute !important;
-        top: 8% !important;
-        left: -15% !important;
-        z-index: 10 !important;
-        text-align: center !important;
-    }
+// @media only screen and (min-width: 768px) {
 
-
-}
+// }
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-    .carousel-caption {
-        position: absolute !important;
-        top: 10% !important;
-        left: -27% !important;
-        z-index: 10 !important;
-        text-align: center !important;
-    }
-}
+// @media only screen and (min-width: 992px) {
+// }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-    .carousel-caption {
-        position: absolute !important;
-        top: 10% !important;
-        left: -27% !important;
-        z-index: 10 !important;
-        text-align: center !important;
-    }
+// @media only screen and (min-width: 1200px) {
+// }
+
+.carousel-caption {
+    position: absolute;
+    width: 500px;
+    top: 85px;
+    text-align: center;
 }

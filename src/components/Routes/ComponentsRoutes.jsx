@@ -32,14 +32,46 @@ const ComponentsRoutes = () => {
                         <Dashboard />
                     </RequireAuth>
                 } />
-                <Route path="/orderService/:id" element={<OrderService></OrderService>} />
-                <Route path="/dashboard/services" element={<YourServiceOrder />} />
-                <Route path="/dashboard/review" element={<AddReview />} />
-                <Route path="/dashboard/manageReview" element={<ManageReview />} />
-                <Route path="/dashboard/addServices" element={<AddServices />} />
-                <Route path="/dashboard/admin" element={<Admin />} />
-                <Route path="/dashboard/allOrders" element={<AllOrders />} />
-                <Route path="/dashboard/showContactUsData" element={<ManageContact />} />
+                <Route path="/orderService/:id" element={
+                  <RequireAuth>
+                    <OrderService></OrderService>
+                  </RequireAuth>
+                } />
+                <Route path="/dashboard/services" element={
+                  <RequireAuth>
+                   <YourServiceOrder /> 
+                  </RequireAuth>
+                } />
+                <Route path="/dashboard/review" element={
+                  <RequireAuth>
+                  <AddReview />  
+                  </RequireAuth>
+                } />
+                <Route path="/dashboard/manageReview" element={
+                  <RequireAuth>
+                    <ManageReview />
+                  </RequireAuth>
+                } />
+                <Route path="/dashboard/addServices" element={
+                  <RequireAuth>
+                     <AddServices />
+                  </RequireAuth>
+               } />
+                <Route path="/dashboard/admin" element={
+                  <RequireAuth>
+                    <Admin />
+                  </RequireAuth>
+                } />
+                <Route path="/dashboard/allOrders" element={
+                  <RequireAuth>
+                     <AllOrders />
+                  </RequireAuth>
+               } />
+                <Route path="/dashboard/showContactUsData" element={
+                  <RequireAuth>
+                    <ManageContact />
+                  </RequireAuth>
+                } />
             </Routes>
         </div>
     );
