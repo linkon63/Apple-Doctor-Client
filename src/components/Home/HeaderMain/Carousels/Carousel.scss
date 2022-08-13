@@ -1,30 +1,76 @@
 /* Extra small devices (phones, 600px and down) */
-// @media only screen and (max-width: 576.98px) {
-  
-
-// }
+@media only screen and (max-width: 576.98px) {
+    .carousel-caption {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        top: -15px;
+        // background-color: red;
+    } 
+    .carousel-caption h3{
+        font-size: 10px;
+        font-weight: bolder;
+    }
+    .carousel-caption p{
+        line-height: 0px;
+        font-size: 7px;
+    }
+}
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-// @media only screen and (min-width: 576px) {
-
-// }
+@media only screen and (min-width: 576px) {
+    .carousel-caption {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        top: 40px;
+        // background-color: black;
+    }
+    .carousel-caption h3{
+        font-size: 25px;
+    }
+    .carousel-caption p{
+        font-size: 12px;
+    }
+}
 
 /* Medium devices (landscape tablets, 768px and up) */
-// @media only screen and (min-width: 768px) {
-
-// }
+@media only screen and (min-width: 768px) {
+    .carousel-caption{
+        top: 55px;
+        // background-color: #ddd;
+    }
+    .carousel-caption h3{
+        font-size: 30px;
+    }
+    .carousel-caption p{
+        font-size: 16px;
+    }
+}
 
 /* Large devices (laptops/desktops, 992px and up) */
-// @media only screen and (min-width: 992px) {
-// }
+@media only screen and (min-width: 992px) {
+    .carousel-caption{
+        top: 90px;
+    }
+}
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-// @media only screen and (min-width: 1200px) {
-// }
-
-.carousel-caption {
-    position: absolute;
-    width: 500px;
-    top: 85px;
-    text-align: center;
+@media only screen and (min-width: 1200px) {
+    .carousel-caption{
+        top: 125px;
+    }
+    .carousel-caption h3{
+        font-size: 50px;
+    }
+    .carousel-caption p{
+        font-size: 25px;
+    }
 }
+
+// .carousel-caption {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: flex-start;
+//     top: 150px;
+// }

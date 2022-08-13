@@ -22,7 +22,6 @@ const Home = () => {
             <Services></Services>
             <ServiceDetails></ServiceDetails>
             <Testimonilas></Testimonilas>
-            <About></About>
             <ContactInfo></ContactInfo>
         </PagesLayout>
     );

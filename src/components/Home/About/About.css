@@ -26,24 +26,22 @@ width: 350px;
         text-align: center;
     }
     .paragraph-aboutHeader{
-        margin: 0 auto;
-        margin-top: 16px;
         font-size: 22px;
         line-height: 1.454545;
         font-weight: 300;
         letter-spacing: .016em;
         font-family: fangsong;
-        max-width: 43.25rem;
+        padding: 2px;
     }
     .about-flex-box{
         display: grid;
-        grid-template-columns: auto auto;
+        grid-template-columns: auto;
         grid-gap: 0px;
         justify-content: space-between;
         margin: 18px;
     }
     .about-flex-box .box{
-    width: 250px;
+    width: 100%;
     }
     .about-flex-box .box img{
     width: 150px;
@@ -90,9 +88,7 @@ width: 350px;
         text-align: center;
     }
     .about-paragraph{
-        width: 80%;
-        margin: 0 150px;
-        padding: 2%;
+        padding: 15px;
     }
     .paragraph-link{
         text-decoration: none;
