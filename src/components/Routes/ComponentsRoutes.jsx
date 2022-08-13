@@ -14,7 +14,7 @@ import AllOrders from '../Dashboard/AllOrders/AllOrders/AllOrders';
 import ManageContact from '../Dashboard/ManageContact/ManageContact';
 import Dashboard from '../Dashboard/Dashboard/Dashboard';
 import RequireAuth from '../PrivateRoute/RequireAuth';
-// import RequireAuth from '../PrivateRoute/RequireAuth';
+import About from '../Home/About/About';
 const ComponentsRoutes = () => {
     return (
         <div>
@@ -24,6 +24,7 @@ const ComponentsRoutes = () => {
                 <Route path="home" element={<Home />} />
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/ourTeam" element={<Team />} />
+                <Route path="/about" element={<About />} />
                 {/* Login component */}
                 <Route path="/login" element={<Login />} />
                 {/* Dashboard Component */}

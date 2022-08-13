@@ -2,7 +2,7 @@ import React from 'react';
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { UserContext } from '../../../App';
-import { BookOutlined, Dashboard, ExitToApp, GroupWork, HomeOutlined, LockOpen, LockOpenOutlined, LockOpenSharp } from '@material-ui/icons';
+import { BookOutlined, Dashboard, ExitToApp, GroupWork, HomeOutlined, Info, LockOpen, LockOpenSharp } from '@material-ui/icons';
 import Logo from '../../../assets/Logo/appleLogo.png'
 // import Logo from '../../../../Image/logo.jpg'
 import './Navbar.css'
@@ -30,6 +30,9 @@ const Navber = () => {
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link active p-3" to="/ourTeam"><GroupWork />Team</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link active p-3" to="/about"><Info/>About</Link>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link active p-3" to="/dashboard"><Dashboard />Dashboard</Link>
