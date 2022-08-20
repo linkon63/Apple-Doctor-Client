@@ -15,6 +15,7 @@ import ManageContact from '../Dashboard/ManageContact/ManageContact';
 import Dashboard from '../Dashboard/Dashboard/Dashboard';
 import RequireAuth from '../PrivateRoute/RequireAuth';
 import About from '../Home/About/About';
+import LoginD from '../Login/LoginD';
 const ComponentsRoutes = () => {
     return (
         <div>
@@ -27,6 +28,7 @@ const ComponentsRoutes = () => {
                 <Route path="/about" element={<About />} />
                 {/* Login component */}
                 <Route path="/login" element={<Login />} />
+                <Route path="/logind" element={<LoginD />} />
                 {/* Dashboard Component */}
                 <Route path="/dashboard" element={
                     <RequireAuth>

@@ -1,15 +1,24 @@
 /* Extra small devices (phones, 600px and down) */
+
+$xsmDisplay: flex;
+$xsmFlexDirection: column;
+$xsmAlignItems: flex-start;
+$xsmTop: -15px;
+
+$xsmFontSize: 10px;
+$xsmFontWeight: bolder;
+
 @media only screen and (max-width: 576.98px) {
     .carousel-caption {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        top: -15px;
+        display: $xsmDisplay;
+        flex-direction: $xsmFlexDirection;
+        align-items: $xsmAlignItems;
+        top: $xsmTop;
         // background-color: red;
     } 
     .carousel-caption h3{
-        font-size: 10px;
-        font-weight: bolder;
+        font-size: $xsmFontSize;
+        font-weight: $xsmFontWeight;
     }
     .carousel-caption p{
         line-height: 0px;
@@ -18,21 +27,7 @@
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 576px) {
-    .carousel-caption {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        top: 40px;
-        // background-color: black;
-    }
-    .carousel-caption h3{
-        font-size: 25px;
-    }
-    .carousel-caption p{
-        font-size: 12px;
-    }
-}
+ 
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {

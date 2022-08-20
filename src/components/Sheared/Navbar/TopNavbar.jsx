@@ -40,7 +40,7 @@ const Navber = () => {
                         {
                             !loggedInUser.email &&
                             <li className="nav-item">
-                                <Link className="nav-link active p-3" to="/login"><LockOpen /> Login</Link>
+                                <Link className="nav-link active p-3" to="/logind"><LockOpen /> Login</Link>
                             </li>
                         }
                         {

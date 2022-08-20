@@ -11,8 +11,8 @@ import './About.css'
 import { ArrowRight } from '@material-ui/icons';
 const About = () => {
     return (
-        <PagesLayout>
-            <section>
+            <section>        <PagesLayout>
+
                 <div>
                     <img src={aboutBanner} alt="" />
                     <span className='about-head-content'>
@@ -78,10 +78,10 @@ const About = () => {
                        *Unless required by law, repairs made by Independent Repair Providers or through Self Service Repair are not backed by Apple. Damage caused by repairs performed outside of Apple or the Apple Authorized Service Provider network is not covered by Apple’s Limited Warranty or an AppleCare plan.
                        </p>
                     </div>
-                </div>
+                </div>        </PagesLayout>
+
             </section>
 
-        </PagesLayout>
     );
 };
 
