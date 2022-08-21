@@ -12,8 +12,22 @@ const RequireAuth = ({ children }) => {
         console.log("Private Route Components")
         console.log("Private Route location", location.pathname)
         console.log("loggedInUser", loggedInUser.email)
+        const userInfo = JSON.parse(getCookie('userInfo'))
+        console.log("Private Route:",userInfo)
+        console.log("Private Route Email:",userInfo.email)
+        setLoggedInUser(userInfo)
     }, [])
 
+    function getCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+          var c = ca[i];
+          while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+          if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+      } 
 
     if (!loggedInUser.email) {
         return <Navigate to="/login" state={{ from: location }} replace></Navigate>

@@ -23,9 +23,11 @@ const Login = () => {
             .signInWithPopup(provider)
             .then((result) => {
                 const user = result.user;
+                console.log("User:", user)
                 setLoggedInUser(user);
-                console.log(user)
+                // console.log(user)
                 setUserToken();
+                setCookie('userInfo', user, 7)
                 navigate(from, { replace: true });
             }).catch((error) => {
                 const errorCode = error.code;
@@ -40,6 +42,40 @@ const Login = () => {
 
         });
     }
+
+    const CookieSetHandle = () => {
+        setCookie("userInfo", { name: "hello" }, 7)
+    }
+    const CookieGet = () => {
+        const userInfo = getCookie('userInfo')
+        console.log("UserInfo:", JSON.parse(userInfo))
+    }
+
+    function setCookie(name, value, days) {
+        var expires = "";
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + (JSON.stringify(value) || "") + expires + "; path=/";
+    }
+
+    function getCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+    }
+
+    function eraseCookie(name) {
+        document.cookie = name + '=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+    }
+
     return (
         <div className="row">
             <div className="col-md-6">
@@ -53,6 +89,8 @@ const Login = () => {
                             <p className="card-text">Do not cancel login page without login</p>
                             <button onClick={handleGoogleSignIn} className='btn btn-dark'> <Android></Android> Sign in with Google</button>
                         </div>
+                        <button onClick={CookieSetHandle}>Set cokkies</button>
+                        <button onClick={CookieGet}>get cokkies</button>
                     </div>
                 </div>
             </div>
