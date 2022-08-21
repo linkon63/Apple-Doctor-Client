@@ -10,12 +10,33 @@ function App() {
   useEffect(() => {
     try {
       console.log("Set cookie from Cookies")
-      const userInfo =JSON.parse( getCookie('userInfo'))
-      setLoggedInUser(userInfo)
+      const userInfo = JSON.parse(getCookie('userInfo'))
+      if (userInfo) {
+        setLoggedInUser(userInfo)
+      }
+      else {
+        console.log("There is no Cookies")
+      }
     } catch (error) {
       console.log("Error get Cookie")
     }
   }, [])
+
+  // window.onload = (event) => {
+  //   console.log('page is fully loaded');
+  //   try {
+  //     console.log("Set cookie from Cookies")
+  //     const userInfo = JSON.parse(getCookie('userInfo'))
+  //     if (userInfo) {
+  //       setLoggedInUser(userInfo)
+  //     }
+  //     else {
+  //       console.log("There is no Cookies")
+  //     }
+  //   } catch (error) {
+  //     console.log("Error get Cookie")
+  //   }
+  // };
 
   function getCookie(name) {
     var nameEQ = name + "=";

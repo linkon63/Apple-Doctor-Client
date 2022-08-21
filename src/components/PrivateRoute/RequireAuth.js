@@ -13,9 +13,13 @@ const RequireAuth = ({ children }) => {
         console.log("Private Route location", location.pathname)
         console.log("loggedInUser", loggedInUser.email)
         const userInfo = JSON.parse(getCookie('userInfo'))
-        console.log("Private Route:",userInfo)
-        console.log("Private Route Email:",userInfo.email)
-        setLoggedInUser(userInfo)
+        if (userInfo) {
+            console.log("Private Route:",userInfo)
+            console.log("Private Route Email:",userInfo.email)
+            setLoggedInUser(userInfo)
+        } else {
+            console.log("Private Route There is no cookie ")
+        }
     }, [])
 
     function getCookie(name) {
