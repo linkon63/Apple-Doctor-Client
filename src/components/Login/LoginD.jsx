@@ -20,7 +20,7 @@ const LoginD = () => {
                                 <form>
                                     <div className="first-method">
                                         <p class="lead fw-normal mb-0 me-3">Sign in with</p>
-                                        <button type="button" class="btn btn-primary btn-floating mx-1">
+                                        <button  type="button" class="btn btn-primary btn-floating mx-1">
                                             <i class="fab fa-google"></i>
                                         </button>
                                         <button type="button" class="btn btn-primary btn-floating mx-1">
