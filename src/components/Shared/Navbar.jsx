@@ -2,50 +2,73 @@ import React from 'react';
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { UserContext } from '../routes/Router';
-// import Logo from '../../../../Image/logo.jpg'
-
+import Logo from '../asset/Image/logo.jpg'
+import './navbarStyle.css'
 const Navbar = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     return (
+        <>
+            {/* // < !--====== NAVBAR ONE PART START ====== --> */}
+            <section class="navbar-area navbar-one">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <nav class="navbar navbar-expand-lg">
+                                <a class="navbar-brand">
+                                    <img src={Logo} alt="Logo" className="logo" />
+                                </a>
+                                <ul class="navbar-nav m-auto">
+                                    <li className="nav-item">
+                                        <Link className="" to="/Home">Home</Link>
+                                    </li>
+                                    <li className="nav-item">
+                                        <Link className="" to="/blog">Blog</Link>
+                                    </li>
+                                    <li className="nav-item">
+                                        <Link className="" to="/ourTeam">Our Team</Link>
+                                    </li>
+                                    <li className="nav-item">
+                                        <Link className="" to="/dashboard">Dashboard</Link>
+                                    </li>
 
-        <nav className="navbar navbar-expand-lg navbar-light">
-            <div className="container-fluid">
-                <Link className="navbar-brand" to="/home">
-                    <img className='img-fluid w-25' src={""} alt="Apple-Doctor-Logo" />
-                </Link>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="collapse navbar-collapse " id="navbarNav">
-                    <ul className="navbar-nav  ml-auto">
-                        <li className="nav-item m-3">
-                            <Link className="nav-link active" aria-current="page" to="/home">Home</Link>
-                        </li>
-                        <li className="nav-item m-3">
-                            <Link className="nav-link" to="/blog">Blog</Link>
-                        </li>
-                        <li className="nav-item m-3">
-                            <Link className="nav-link" to="/ourTeam">Our Team</Link>
-                        </li>
-                        <li className="nav-item m-3">
-                            <Link className="nav-link" to="/dashboard">Dashboard</Link>
-                        </li>
-                        {
-                            !loggedInUser.email &&
-                            <li className="nav-item m-3">
-                                <Link className="nav-link" to="/login">Login</Link>
-                            </li>
-                        }
-                        {
-                            loggedInUser.email &&
-                            <li className="nav-item m-3">
-                                <a className="nav-link" href='/home'>Logout</a>
-                            </li>
-                        }
-                    </ul>
+                                </ul>
+                                <div class="navbar-btn d-none d-sm-inline-block fw-bold">
+
+                                    {
+                                        !loggedInUser.email &&
+                                        <li className="btn btn-primary">
+                                            <Link to="/login" class="btn btn-primary ">
+                                                Login
+                                            </Link >
+                                        </li>
+                                    }
+                                    {
+                                        loggedInUser.email &&
+                                        <li className="btn btn-primary">
+                                            <a herf="/home" class="btn btn-primary">
+                                                Logout
+                                            </a >
+                                        </li>
+                                    }
+
+                                    {/* <li>
+                                            <Link class="btn primary-btn-outline">
+                                                Sign In
+                                            </Link >
+                                        </li>
+                                        <li>
+                                            <Link class="btn primary-btn-outline">
+                                                Sign In
+                                            </Link >
+                                        </li> */}
+                                </div>
+                            </nav>
+                            {/* <!-- navbar --> */}
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </nav>
+            </section>
+        </>
     );
 };
 
