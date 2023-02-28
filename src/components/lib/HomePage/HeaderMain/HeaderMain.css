@@ -1,0 +1,6 @@
+.headerMainContainer {
+    height: 600px;
+    position: relative;
+    background-image: url('../../../asset/Image/appleBG.jpg');
+    background-size: cover;
+}
