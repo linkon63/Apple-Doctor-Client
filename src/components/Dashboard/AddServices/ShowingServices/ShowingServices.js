@@ -7,14 +7,14 @@ const ShowingServices = () => {
     const [services, setServices] = useState([]);
     const history = useHistory();
     useEffect(() => {
-        fetch('https://apple-doctor-server.herokuapp.com/allServices')
+        fetch('https://apple-doctor-server-git.onrender.com/allServices')
             .then(res => res.json())
             .then(data => setServices(data))
     }, []);
 
     //Delete Services
     const handleDelete = id => {
-        fetch(`https://apple-doctor-server.herokuapp.com/deleteService/${id}`, {
+        fetch(`https://apple-doctor-server-git.onrender.com/deleteService/${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'
@@ -31,8 +31,8 @@ const ShowingServices = () => {
     return (
         <div className='m-auto mt-5'>
             {!services.length && <div className="spinner-grow" role="status">
-                        <span className="sr-only">Loading...</span>
-                        </div>}
+                <span className="sr-only">Loading...</span>
+            </div>}
             {
                 services.length && services.map(service =>
                     <div className="card mb-2">

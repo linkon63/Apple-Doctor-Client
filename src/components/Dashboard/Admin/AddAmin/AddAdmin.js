@@ -20,7 +20,7 @@ const AddAdmin = () => {
             adminAdd: loggedInUser.displayName
         }
         //Sending Admin Data to the Server
-        fetch('https://apple-doctor-server.herokuapp.com/admin', {
+        fetch('https://apple-doctor-server-git.onrender.com/admin', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

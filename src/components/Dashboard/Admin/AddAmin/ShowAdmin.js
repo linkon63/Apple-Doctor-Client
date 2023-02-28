@@ -7,7 +7,7 @@ const ShowAdmin = () => {
     const [admin, setAdmin] = useState([]);
     const history = useHistory();
     useEffect(() => {
-        fetch('https://apple-doctor-server.herokuapp.com/showAdmin')
+        fetch('https://apple-doctor-server-git.onrender.com/showAdmin')
             .then(res => res.json())
             .then(data => {
                 console.log(data);
@@ -18,7 +18,7 @@ const ShowAdmin = () => {
 
     const handleDelete = id => {
         console.log(id);
-        fetch(`https://apple-doctor-server.herokuapp.com/deleteAdmin/${id}`, {
+        fetch(`https://apple-doctor-server-git.onrender.com/deleteAdmin/${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'
@@ -34,7 +34,7 @@ const ShowAdmin = () => {
     }
     return (
         <div className='m-auto mt-5'>
-            {!admin.length && 
+            {!admin.length &&
                 <div className="spinner-grow" role="status">
                     <span className="sr-only">Loading...</span>
                 </div>

@@ -6,7 +6,7 @@ const OrderShowing = ({ order }) => {
 
     const handleDelete = (id) => {
         console.log(id);
-        fetch(`https://apple-doctor-server.herokuapp.com/allServiceOrderDelete/${id}`, {
+        fetch(`https://apple-doctor-server-git.onrender.com/allServiceOrderDelete/${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'
@@ -31,7 +31,7 @@ const OrderShowing = ({ order }) => {
         const status = 'Order Done';
         const dbStatus = { status };
         console.log(dbStatus);
-        fetch(`https://apple-doctor-server.herokuapp.com/updateOrderStatus/${id}`, {
+        fetch(`https://apple-doctor-server-git.onrender.com/updateOrderStatus/${id}`, {
             method: 'PATCH',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(dbStatus)

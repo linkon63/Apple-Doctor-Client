@@ -8,7 +8,7 @@ const ManageReview = () => {
     const [reviews, setReviews] = useState([]);
 
     useEffect(() => {
-        fetch('https://apple-doctor-server.herokuapp.com/reviewsData')
+        fetch('https://apple-doctor-server-git.onrender.com/reviewsData')
             .then(res => res.json())
             .then(data => {
                 console.log(data);
@@ -19,11 +19,11 @@ const ManageReview = () => {
         <div className='d-flex'>
             <DashboardNavbar></DashboardNavbar>
             <div className='container'>
-                <h1 className="text-center text-info mb-5"> <small>Manage User Reviews From Here : {reviews.length}</small> 
-                            {!reviews.length && <div className="spinner-grow text-center" role="status">
-                                    <span className="sr-only">Loading...</span>
-                                </div>
-                            }
+                <h1 className="text-center text-info mb-5"> <small>Manage User Reviews From Here : {reviews.length}</small>
+                    {!reviews.length && <div className="spinner-grow text-center" role="status">
+                        <span className="sr-only">Loading...</span>
+                    </div>
+                    }
                 </h1>
                 <div className='container row'>
                     {

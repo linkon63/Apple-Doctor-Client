@@ -8,7 +8,7 @@ const Testimonilas = () => {
     const [reviewsData, setReviewsData] = useState([]);
 
     useEffect(() => {
-        fetch('https://apple-doctor-server.herokuapp.com/reviewsData')
+        fetch('https://apple-doctor-server-git.onrender.com/reviewsData')
             .then(res => res.json())
             .then(data => {
                 console.log(data);
@@ -19,8 +19,8 @@ const Testimonilas = () => {
         <div >
             <h1 className='pt-5 ml-5 pb-5'><DoubleArrow></DoubleArrow>Testimonial
                 {!reviewsData.length && <div className="spinner-grow" role="status">
-                        <span className="sr-only">Loading...</span>
-                    </div>}
+                    <span className="sr-only">Loading...</span>
+                </div>}
             </h1>
             <div className='container'>
                 <div className="row row-cols-1 row-cols-md-3 g-2 mb-5">

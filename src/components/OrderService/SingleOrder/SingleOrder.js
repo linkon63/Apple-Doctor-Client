@@ -40,7 +40,7 @@ const SingleOrder = ({ orderService }) => {
             orderTime: new Date()
         }
         //Sending Order data to the back-End
-        fetch('https://apple-doctor-server.herokuapp.com/addOrder', {
+        fetch('https://apple-doctor-server-git.onrender.com/addOrder', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
