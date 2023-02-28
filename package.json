@@ -12,7 +12,7 @@
     "@testing-library/user-event": "^12.8.3",
     "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
-    "firebase": "^8.4.1",
+    "firebase": "^8.10.1",
     "material-icons": "^0.6.1",
     "react": "^17.0.2",
     "react-bootstrap": "^1.5.2",
@@ -48,7 +48,6 @@
   },
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",
-  "devDependencies": {},
   "author": "",
   "license": "ISC"
 }

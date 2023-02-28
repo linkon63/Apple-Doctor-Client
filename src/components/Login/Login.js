@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useHistory, useLocation } from 'react-router-dom';
+import { useHistory, useLocation } from 'react-router-dom';
 import firebase from "firebase/app";
 import "firebase/auth";
 import "firebase/firestore";
@@ -7,6 +7,7 @@ import firebaseConfig from './firebase.config';
 import { UserContext } from '../../App';
 import { useContext } from 'react';
 import { Android, VpnLock } from '@material-ui/icons';
+
 if (firebase.apps.length === 0) {
     firebase.initializeApp(firebaseConfig);
 }
