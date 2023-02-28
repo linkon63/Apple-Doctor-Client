@@ -7,7 +7,7 @@ const ManageContact = () => {
     const [contacts, setContacts] = useState([]);
 
     useEffect(() => {
-        fetch('https://apple-doctor-server.herokuapp.com/showContactUsData')
+        fetch('https://apple-doctor-server-git.onrender.com/showContactUsData')
             .then(res => res.json())
             .then(data => {
                 console.log(data);

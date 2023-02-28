@@ -7,7 +7,7 @@ import { useEffect } from 'react';
 const Services = () => {
     const [services, setServices] = useState([]);
     useEffect(() => {
-        fetch('https://apple-doctor-server.herokuapp.com/allServices')
+        fetch('https://apple-doctor-server-git.onrender.com/allServices')
             .then(res => res.json())
             .then(data => setServices(data))
     }, []);
@@ -16,9 +16,9 @@ const Services = () => {
             <h1 className='ml-5 pt-5'><DoubleArrow></DoubleArrow>SERVICES</h1>
             <div>
                 <div className='container text-center pb-5' >
-                    <h1 className='text-dark' style={{ fontFamily: 'arial' }}>Select a device to find out the cost of repairs 
-                    {!services.length && <div className="spinner-grow" role="status">
-                        <span className="sr-only">Loading...</span>
+                    <h1 className='text-dark' style={{ fontFamily: 'arial' }}>Select a device to find out the cost of repairs
+                        {!services.length && <div className="spinner-grow" role="status">
+                            <span className="sr-only">Loading...</span>
                         </div>}
                     </h1>
                 </div>

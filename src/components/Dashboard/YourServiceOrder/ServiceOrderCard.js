@@ -6,7 +6,7 @@ const ServiceOrderCard = ({ order }) => {
 
     //Cancel Order
     const orderCancel = id => {
-        fetch(`https://apple-doctor-server.herokuapp.com/allServiceOrderDelete/${id}`, {
+        fetch(`https://apple-doctor-server-git.onrender.com/allServiceOrderDelete/${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'
@@ -29,7 +29,7 @@ const ServiceOrderCard = ({ order }) => {
                     <div className="card">
                         <div className="card-header bg-dark text-white text-center">
                             Order Details
-                    </div>
+                        </div>
                         <ul className="list-group list-group-flush">
                             <li className="list-group-item bg-warning text-danger"> <strong>{order.orderStatus || <span className='text-success'>Order Done</span>}</strong> </li>
                             <li className="list-group-item">ID : {order._id}</li>

@@ -20,7 +20,7 @@ const AddServices = () => {
             des: data.des
         }
         console.log(servicesData);
-        const url = `https://apple-doctor-server.herokuapp.com/addServices`;
+        const url = `https://apple-doctor-server-git.onrender.com/addServices`;
         fetch(url, {
             method: 'POST',
             headers: {

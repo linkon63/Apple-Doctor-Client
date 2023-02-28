@@ -9,7 +9,7 @@ const AllOrders = () => {
     const [orders, setOrders] = useState([]);
 
     useEffect(() => {
-        fetch(`https://apple-doctor-server.herokuapp.com/allServiceOrder`)
+        fetch(`https://apple-doctor-server-git.onrender.com/allServiceOrder`)
             .then(res => res.json())
             .then(data => {
                 console.log(data);
@@ -22,7 +22,7 @@ const AllOrders = () => {
             <DashboardNavbar></DashboardNavbar>
             <div className='container'>
                 <h1 className='text-success text-center mt-3'>Your DataBase All Order Are Here : {orders.length}
-                    {!orders.length && 
+                    {!orders.length &&
                         <div className="spinner-grow" role="status">
                             <span className="sr-only">Loading...</span>
                         </div>

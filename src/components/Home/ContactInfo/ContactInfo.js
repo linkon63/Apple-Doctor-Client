@@ -17,7 +17,7 @@ const ContactInfo = () => {
         console.log(contactUsData);
 
         //Sending contactWithUs data to the Server
-        fetch('https://apple-doctor-server.herokuapp.com/contactWithUs', {
+        fetch('https://apple-doctor-server-git.onrender.com/contactWithUs', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

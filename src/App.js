@@ -32,65 +32,65 @@ function App() {
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <Router>
-            <Switch>
-            <Route path="/home">
+        <Switch>
+          <Route path="/home">
             <Home></Home>
-            </Route>
-            <Route path="/blog">
-              <Navber></Navber>
-                <div className="container text-center mt-5 mb-5">
-                    <h1>Welcome to Blog</h1>
-                    <h1>This Page Under Building Goto DashBoard Or Login</h1>
-                </div>
-              <Footer></Footer>  
-            </Route>
-            <PrivateRoute path="/orderService/:id">
-              <OrderService></OrderService>
-            </PrivateRoute>
-            <Route path="/ourTeam">
-              <Navber></Navber>
-                <div className="container text-center mt-5 mb-5">
-                    <h1>Welcome to Team</h1>
-                    <h1>This Page Under Building Goto DashBoard Or Login</h1>
-                </div>
-              <Footer></Footer>
-            </Route>
-            <Route path="/login">
-              <Login></Login>
-            </Route>
-            <PrivateRoute path="/dashboard/services">
-              <YourServiceOrder></YourServiceOrder>
-            </PrivateRoute>
-            <PrivateRoute path="/dashboard/review">
-              <AddReview></AddReview>
-            </PrivateRoute>
-            <PrivateRoute path="/dashboard/manageReview">
-              <ManageReview></ManageReview>
-            </PrivateRoute>
-            <PrivateRoute path="/dashboard/addServices">
-              <AddServices></AddServices>
-            </PrivateRoute>
-            <PrivateRoute path="/dashboard/admin">
-              <Admin></Admin>
-            </PrivateRoute>
-            <PrivateRoute path="/dashboard/allOrders">
-              <AllOrders></AllOrders>
-            </PrivateRoute>
-            <PrivateRoute path="/dashboard/showContactUsData">
-              <ManageContact></ManageContact>
-            </PrivateRoute>
-            <PrivateRoute path="/dashboard">
-              <Dashboard></Dashboard>
-            </PrivateRoute>
-            <Route exact path="/">
-              <Home></Home>
-            </Route>
-            <Route path="*">
-              <Home></Home>
-            </Route>
+          </Route>
+          <Route path="/blog">
+            <Navber></Navber>
+            <div className="container text-center mt-5 mb-5">
+              <h1>Welcome to Blog</h1>
+              <h1>This Page Under Building Goto DashBoard Or Login</h1>
+            </div>
+            <Footer></Footer>
+          </Route>
+          <PrivateRoute path="/orderService/:id">
+            <OrderService></OrderService>
+          </PrivateRoute>
+          <Route path="/ourTeam">
+            <Navber></Navber>
+            <div className="container text-center mt-5 mb-5">
+              <h1>Welcome to Team</h1>
+              <h1>This Page Under Building Goto DashBoard Or Login</h1>
+            </div>
+            <Footer></Footer>
+          </Route>
+          <Route path="/login">
+            <Login></Login>
+          </Route>
+          <PrivateRoute path="/dashboard/services">
+            <YourServiceOrder></YourServiceOrder>
+          </PrivateRoute>
+          <PrivateRoute path="/dashboard/review">
+            <AddReview></AddReview>
+          </PrivateRoute>
+          <PrivateRoute path="/dashboard/manageReview">
+            <ManageReview></ManageReview>
+          </PrivateRoute>
+          <PrivateRoute path="/dashboard/addServices">
+            <AddServices></AddServices>
+          </PrivateRoute>
+          <PrivateRoute path="/dashboard/admin">
+            <Admin></Admin>
+          </PrivateRoute>
+          <PrivateRoute path="/dashboard/allOrders">
+            <AllOrders></AllOrders>
+          </PrivateRoute>
+          <PrivateRoute path="/dashboard/showContactUsData">
+            <ManageContact></ManageContact>
+          </PrivateRoute>
+          <PrivateRoute path="/dashboard">
+            <Dashboard></Dashboard>
+          </PrivateRoute>
+          <Route exact path="/">
+            <Home></Home>
+          </Route>
+          <Route path="*">
+            <Home></Home>
+          </Route>
         </Switch>
       </Router>
-    </UserContext.Provider>  
+    </UserContext.Provider>
   );
 }
 
