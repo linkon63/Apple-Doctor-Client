@@ -1,21 +1,19 @@
-import React from 'react';
-import { useState } from 'react';
-import { useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import { useForm } from 'react-hook-form';
-import { useHistory } from 'react-router';
-import { UserContext } from '../../../App';
-import OrderForm from '../OrderForm/OrderForm';
+import { Navigate, redirect, useNavigate } from 'react-router';
+import { UserContext } from '../../../routes/Router';
 import Payment from '../Payment/Payment';
 
 
 const SingleOrder = ({ orderService }) => {
-    let history = useHistory();
-    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
-    console.log(loggedInUser);
-    const [shippingData, setShippingData] = useState(null)
+    const navigate = useNavigate();
 
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    console.log("loggedInUser", loggedInUser);
+
+    const [shippingData, setShippingData] = useState(null)
     const userData = { name: loggedInUser.displayName, email: loggedInUser.email, photo: loggedInUser.photoURL }
-    console.log(userData);
+    console.log("userData", userData);
 
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
 
@@ -40,7 +38,7 @@ const SingleOrder = ({ orderService }) => {
             orderTime: new Date()
         }
         //Sending Order data to the back-End
-        fetch('https://apple-doctor-server-git.onrender.com/addOrder', {
+        fetch('http://localhost:5000/addOrder', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -50,8 +48,10 @@ const SingleOrder = ({ orderService }) => {
             .then(res => res.json())
             .then(data => {
                 if (data) {
-                    alert('Your Order Placed Successfully');
-                    history.push('/home');
+                    navigate("/home");
+                    // <Navigate to="/home" replace={true} />
+                    console.log('Your Order Placed Successfully');
+                    // redirect("/home")
                 }
             })
     }
