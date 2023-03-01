@@ -1,8 +1,8 @@
 import React from 'react';
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { UserContext } from '../routes/Router';
-import Logo from '../asset/Image/logo.jpg'
+import { UserContext } from '../../routes/Router';
+import Logo from '../../asset/Image/logo.jpg'
 import './navbarStyle.css'
 const Navbar = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
