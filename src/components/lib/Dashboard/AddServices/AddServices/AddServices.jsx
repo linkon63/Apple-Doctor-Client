@@ -1,14 +1,14 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
-import { useHistory } from 'react-router';
-import DashboardNavbar from '../../DashboardNavber/DashboardNavber/DashboardNavbar';
 import axios from 'axios';
+import DashboardNavbar from '../../DashboardNavbar/DashboardNavbar/DashboardNavbar';
 import ShowingServices from '../ShowingServices/ShowingServices';
+
 
 const AddServices = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
-    let history = useHistory();
+    const navigate = useNavigate();
     const [imageURL, setImageURl] = useState(null);
 
     const onSubmit = data => {
@@ -20,7 +20,7 @@ const AddServices = () => {
             des: data.des
         }
         console.log(servicesData);
-        const url = `https://apple-doctor-server-git.onrender.com/addServices`;
+        const url = `http://localhost:5000/addServices`;
         fetch(url, {
             method: 'POST',
             headers: {
@@ -32,7 +32,7 @@ const AddServices = () => {
             )
 
         alert('Your Data has Sended to the server');
-        history.push('/dashboard')
+        navigate('/dashboard')
     }
 
     //---------handleImageUpload in ImageBB Hosting---------
@@ -56,7 +56,7 @@ const AddServices = () => {
 
     return (
         <div className='d-flex'>
-            <DashboardNavbar></DashboardNavbar>
+            <DashboardNavbar />
             <div className='container'>
                 <h1 className='text-center mt-5 text-info'>Add Services You Will Provide </h1>
                 <p className='text-center text-danger'>Note : It Will Show the Home Page When you will add this</p>
@@ -82,7 +82,7 @@ const AddServices = () => {
                     <div className='col-md-4'>
                         <h4 className='text-info mb-3'>Your Total Services</h4>
                         <p className='text-center text-danger'>Note: Please Add New Device and Delete This One</p>
-                        <ShowingServices></ShowingServices>
+                        <ShowingServices />
                     </div>
 
                 </div>

@@ -1,12 +1,13 @@
 import React from 'react';
-import { useHistory } from 'react-router';
+import { useNavigate } from 'react-router-dom';
 
 const OrderShowing = ({ order }) => {
-    const history = useHistory();
+
+    const navigate = useNavigate();
 
     const handleDelete = (id) => {
         console.log(id);
-        fetch(`https://apple-doctor-server-git.onrender.com/allServiceOrderDelete/${id}`, {
+        fetch(`http://localhost:5000/allServiceOrderDelete/${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'
@@ -18,20 +19,16 @@ const OrderShowing = ({ order }) => {
             }
             )
         alert('Your Order has Deleted');
-        history.push('/dashboard');
+        navigate('/dashboard')
     }
     //Handle Order Done
     const orderDone = id => {
         console.log('orderDone', id);
         // // console.log('Updating')
-        // console.log('hit inside');
-        // const price = document.getElementById('price').value;
-        // const quantity = document.getElementById('quantity').value;
-        // const product = {id, price, quantity};
         const status = 'Order Done';
         const dbStatus = { status };
         console.log(dbStatus);
-        fetch(`https://apple-doctor-server-git.onrender.com/updateOrderStatus/${id}`, {
+        fetch(`http://localhost:5000/updateOrderStatus/${id}`, {
             method: 'PATCH',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(dbStatus)

@@ -1,14 +1,13 @@
-import React from 'react';
-import { useEffect } from 'react';
-import { useState } from 'react';
-import DashboardNavbar from '../../DashboardNavber/DashboardNavber/DashboardNavbar';
+import React, { useEffect, useState } from 'react';
+import DashboardNavbar from '../../DashboardNavbar/DashboardNavbar/DashboardNavbar';
 import ShowingReview from './ShowingReview';
+
 
 const ManageReview = () => {
     const [reviews, setReviews] = useState([]);
 
     useEffect(() => {
-        fetch('https://apple-doctor-server-git.onrender.com/reviewsData')
+        fetch('http://localhost:5000/reviewsData')
             .then(res => res.json())
             .then(data => {
                 console.log(data);
@@ -17,7 +16,7 @@ const ManageReview = () => {
     }, [])
     return (
         <div className='d-flex'>
-            <DashboardNavbar></DashboardNavbar>
+            <DashboardNavbar />
             <div className='container'>
                 <h1 className="text-center text-info mb-5"> <small>Manage User Reviews From Here : {reviews.length}</small>
                     {!reviews.length && <div className="spinner-grow text-center" role="status">

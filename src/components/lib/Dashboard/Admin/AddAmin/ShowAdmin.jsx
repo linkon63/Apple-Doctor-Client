@@ -1,13 +1,13 @@
-import React from 'react';
-import { useEffect } from 'react';
-import { useState } from 'react';
-import { useHistory } from 'react-router';
+import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const ShowAdmin = () => {
     const [admin, setAdmin] = useState([]);
-    const history = useHistory();
+    const navigate = useNavigate();
+
+
     useEffect(() => {
-        fetch('https://apple-doctor-server-git.onrender.com/showAdmin')
+        fetch('http://localhost:5000/showAdmin')
             .then(res => res.json())
             .then(data => {
                 console.log(data);
@@ -18,7 +18,7 @@ const ShowAdmin = () => {
 
     const handleDelete = id => {
         console.log(id);
-        fetch(`https://apple-doctor-server-git.onrender.com/deleteAdmin/${id}`, {
+        fetch(`http://localhost:5000/deleteAdmin/${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'
@@ -30,7 +30,8 @@ const ShowAdmin = () => {
             }
             )
         alert('Your Order has Deleted');
-        history.push('/dashboard');
+        navigate('/dashboard')
+
     }
     return (
         <div className='m-auto mt-5'>

@@ -1,16 +1,15 @@
-import React from 'react';
-import { useState } from 'react';
-import { useContext } from 'react';
+import React, { useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
-import { useHistory } from 'react-router';
-import { UserContext } from '../../../../App';
+import { UserContext } from '../../../../routes/Router';
 import ShowAdmin from './ShowAdmin';
+
 
 const AddAdmin = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
+    const navigate = useNavigate();
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
-    let history = useHistory();
 
     const onSubmit = data => {
         console.log(data);
@@ -20,7 +19,7 @@ const AddAdmin = () => {
             adminAdd: loggedInUser.displayName
         }
         //Sending Admin Data to the Server
-        fetch('https://apple-doctor-server-git.onrender.com/admin', {
+        fetch('http://localhost:5000/admin', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -31,7 +30,7 @@ const AddAdmin = () => {
             .then(data => {
                 if (data) {
                     alert('Admin Added Successfully');
-                    history.push('/dashboard');
+                    navigate('/dashboard')
                 }
             })
     }
@@ -51,7 +50,7 @@ const AddAdmin = () => {
             <div className="col-md-4">
                 <p className='text-center text-primary'> <strong>Look How Many Admin Accessing This Project</strong> </p>
                 <p className='text-center text-danger'>If you delete yourself you can't add yourself to admin another admin have to add you ThankYou</p>
-                <ShowAdmin></ShowAdmin>
+                <ShowAdmin />
             </div>
         </div>
     );

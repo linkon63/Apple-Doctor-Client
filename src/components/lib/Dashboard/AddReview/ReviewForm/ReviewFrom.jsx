@@ -1,15 +1,14 @@
-import React from 'react';
-import { useState } from 'react';
-import { useContext } from 'react';
-import { useForm } from "react-hook-form";
-import { useHistory } from 'react-router';
-import { UserContext } from '../../../../App';
+import React, { useContext, useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { Navigate, useNavigate } from 'react-router-dom';
+import { UserContext } from '../../../../routes/Router';
 
 const ReviewFrom = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [addReview, setAddReview] = useState([]);
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
-    let history = useHistory();
+
+    const navigate = useNavigate();
     const onSubmit = data => {
         const reviewData = {
             name: data.name,
@@ -19,7 +18,7 @@ const ReviewFrom = () => {
         console.log('data', data)
         console.log(reviewData);
         //Sending Review to the Server
-        fetch('https://apple-doctor-server-git.onrender.com/addReview', {
+        fetch('http://localhost:5000/addReview', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -30,7 +29,7 @@ const ReviewFrom = () => {
             .then(data => {
                 if (data) {
                     alert('Your Review Done Successfully');
-                    history.push('/dashboard');
+                    navigate('/dashboard')
                 }
             })
 

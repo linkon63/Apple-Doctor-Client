@@ -11,7 +11,7 @@ import './Sidebar.css';
 const DashboardNavbar = () => {
 
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
-    const [isAdmin, setIsAdmin] = useState(false);
+    const [isAdmin, setIsAdmin] = useState(true);
 
     useEffect(() => {
         fetch('http://localhost:5000/isAdmin', {
@@ -20,7 +20,10 @@ const DashboardNavbar = () => {
             body: JSON.stringify({ email: loggedInUser.email })
         })
             .then(res => res.json())
-            .then(data => setIsAdmin(data));
+            .then(data => {
+                // setIsAdmin(data)
+            }
+            );
     }, [])
 
     return (

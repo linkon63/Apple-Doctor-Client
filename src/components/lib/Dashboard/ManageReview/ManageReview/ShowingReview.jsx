@@ -1,13 +1,15 @@
 import React from 'react';
 import { useHistory, useParams } from 'react-router';
+import { useNavigate } from 'react-router-dom';
 
 const ShowingReview = ({ review }) => {
 
-    const history = useHistory();
+    const navigate = useNavigate();
+
 
     const handleDelete = (id) => {
         console.log('handle Delete', id);
-        fetch(`https://apple-doctor-server-git.onrender.com/reviewsData/${id}`, {
+        fetch(`http://localhost:5000/reviewsData/${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'
@@ -19,7 +21,7 @@ const ShowingReview = ({ review }) => {
             }
             )
         alert('Your Reviews has Deleted');
-        history.push('/dashboard');
+        navigate('/dashboard')
     }
 
     return (

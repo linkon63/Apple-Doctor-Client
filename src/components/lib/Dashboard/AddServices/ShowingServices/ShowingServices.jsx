@@ -1,20 +1,23 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
-import { useHistory } from 'react-router';
+import { useNavigate } from 'react-router-dom';
+
 
 const ShowingServices = () => {
     const [services, setServices] = useState([]);
-    const history = useHistory();
+
+    const navigate = useNavigate();
+
     useEffect(() => {
-        fetch('https://apple-doctor-server-git.onrender.com/allServices')
+        fetch('http://localhost:5000/allServices')
             .then(res => res.json())
             .then(data => setServices(data))
     }, []);
 
     //Delete Services
     const handleDelete = id => {
-        fetch(`https://apple-doctor-server-git.onrender.com/deleteService/${id}`, {
+        fetch(`http://localhost:5000/deleteService/${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'
@@ -26,7 +29,7 @@ const ShowingServices = () => {
             }
             )
         alert('Your Order has Deleted');
-        history.push('/dashboard');
+        navigate('/dashboard')
     }
     return (
         <div className='m-auto mt-5'>
