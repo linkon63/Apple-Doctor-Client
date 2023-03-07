@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "apple-doctor-47e66"
-  }
+    "default": "assignment-ten",
+    "develop": "assignment-ten"
+  },
+  "targets": {},
+  "etags": {}
 }

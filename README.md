@@ -1,9 +1,9 @@
 # Apple doctor client site
 
-# Live Hosting : https://apple-doctor-47e66.web.app/
-# Server Hosting : 
-# Client Site Code Link :
-# Server Site Code Link :
+# Live Hosting : https://appledoctorclient.netlify.app/ 
+#                https://assignment-ten.web.app/
+# Client Site Code Link : https://github.com/linkon63/Apple-Doctor-Client
+# Server Site Code Link :https://github.com/linkon63/Apple-Doctor-Server
 
 # Welcome to my project
     1: Home Page 6 Section
