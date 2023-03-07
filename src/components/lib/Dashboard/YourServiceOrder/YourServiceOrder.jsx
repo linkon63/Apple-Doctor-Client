@@ -9,7 +9,7 @@ const YourServiceOrder = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/serviceOrder?email=` + loggedInUser.email)
+        fetch(`https://apple-doctor-server-git.onrender.com/serviceOrder?email=` + loggedInUser.email)
             .then(res => res.json())
             .then(data => {
                 console.log(data);

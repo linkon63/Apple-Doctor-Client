@@ -7,7 +7,7 @@ const ManageReview = () => {
     const [reviews, setReviews] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/reviewsData')
+        fetch('https://apple-doctor-server-git.onrender.com/reviewsData')
             .then(res => res.json())
             .then(data => {
                 console.log(data);

@@ -20,7 +20,7 @@ const AddServices = () => {
             des: data.des
         }
         console.log(servicesData);
-        const url = `http://localhost:5000/addServices`;
+        const url = `https://apple-doctor-server-git.onrender.com/addServices`;
         fetch(url, {
             method: 'POST',
             headers: {

@@ -9,7 +9,7 @@ const ShowingReview = ({ review }) => {
 
     const handleDelete = (id) => {
         console.log('handle Delete', id);
-        fetch(`http://localhost:5000/reviewsData/${id}`, {
+        fetch(`https://apple-doctor-server-git.onrender.com/reviewsData/${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'

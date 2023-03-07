@@ -7,7 +7,7 @@ import { useEffect } from 'react';
 const Services = () => {
     const [services, setServices] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/allServices')
+        fetch('https://apple-doctor-server-git.onrender.com/allServices')
             .then(res => res.json())
             .then(data => setServices(data))
     }, []);

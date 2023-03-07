@@ -44,10 +44,8 @@ const Navbar = () => {
                                     }
                                     {
                                         loggedInUser.email &&
-                                        <li className="btn btn-primary">
-                                            <a herf="/home" class="btn btn-primary">
-                                                Logout
-                                            </a >
+                                        <li className="btn btn-primary" onClick={() => window.location.reload()}>
+                                            Logout
                                         </li>
                                     }
 

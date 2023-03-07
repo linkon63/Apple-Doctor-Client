@@ -38,7 +38,7 @@ const SingleOrder = ({ orderService }) => {
             orderTime: new Date()
         }
         //Sending Order data to the back-End
-        fetch('http://localhost:5000/addOrder', {
+        fetch('https://apple-doctor-server-git.onrender.com/addOrder', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

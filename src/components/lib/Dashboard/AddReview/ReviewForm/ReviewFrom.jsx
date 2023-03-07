@@ -18,7 +18,7 @@ const ReviewFrom = () => {
         console.log('data', data)
         console.log(reviewData);
         //Sending Review to the Server
-        fetch('http://localhost:5000/addReview', {
+        fetch('https://apple-doctor-server-git.onrender.com/addReview', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

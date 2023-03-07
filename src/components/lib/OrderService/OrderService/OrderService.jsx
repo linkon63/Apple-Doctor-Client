@@ -11,7 +11,7 @@ const OrderService = () => {
     console.log("params id:", id);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/orderService/${id}`)
+        fetch(`https://apple-doctor-server-git.onrender.com/orderService/${id}`)
             .then(res => res.json())
             .then(data => {
                 console.log("data", data)

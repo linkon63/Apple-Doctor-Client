@@ -10,14 +10,14 @@ const ShowingServices = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch('http://localhost:5000/allServices')
+        fetch('https://apple-doctor-server-git.onrender.com/allServices')
             .then(res => res.json())
             .then(data => setServices(data))
     }, []);
 
     //Delete Services
     const handleDelete = id => {
-        fetch(`http://localhost:5000/deleteService/${id}`, {
+        fetch(`https://apple-doctor-server-git.onrender.com/deleteService/${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'

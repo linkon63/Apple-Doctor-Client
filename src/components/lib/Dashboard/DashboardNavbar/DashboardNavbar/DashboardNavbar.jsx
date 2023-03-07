@@ -14,7 +14,7 @@ const DashboardNavbar = () => {
     const [isAdmin, setIsAdmin] = useState(true);
 
     useEffect(() => {
-        fetch('http://localhost:5000/isAdmin', {
+        fetch('https://apple-doctor-server-git.onrender.com/isAdmin', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify({ email: loggedInUser.email })

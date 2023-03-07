@@ -19,7 +19,7 @@ const AddAdmin = () => {
             adminAdd: loggedInUser.displayName
         }
         //Sending Admin Data to the Server
-        fetch('http://localhost:5000/admin', {
+        fetch('https://apple-doctor-server-git.onrender.com/admin', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

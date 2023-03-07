@@ -6,7 +6,7 @@ const ServiceOrderCard = ({ order }) => {
 
     //Cancel Order
     const orderCancel = id => {
-        fetch(`http://localhost:5000/allServiceOrderDelete/${id}`, {
+        fetch(`https://apple-doctor-server-git.onrender.com/allServiceOrderDelete/${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'

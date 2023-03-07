@@ -7,7 +7,7 @@ const ShowAdmin = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/showAdmin')
+        fetch('https://apple-doctor-server-git.onrender.com/showAdmin')
             .then(res => res.json())
             .then(data => {
                 console.log(data);
@@ -18,7 +18,7 @@ const ShowAdmin = () => {
 
     const handleDelete = id => {
         console.log(id);
-        fetch(`http://localhost:5000/deleteAdmin/${id}`, {
+        fetch(`https://apple-doctor-server-git.onrender.com/deleteAdmin/${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'

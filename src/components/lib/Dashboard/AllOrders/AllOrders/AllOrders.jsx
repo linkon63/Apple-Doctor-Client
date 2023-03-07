@@ -7,7 +7,7 @@ const AllOrders = () => {
     const [orders, setOrders] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/allServiceOrder`)
+        fetch(`https://apple-doctor-server-git.onrender.com/allServiceOrder`)
             .then(res => res.json())
             .then(data => {
                 console.log(data);
