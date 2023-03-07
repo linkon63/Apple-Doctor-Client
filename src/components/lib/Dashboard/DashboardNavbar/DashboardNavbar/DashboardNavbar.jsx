@@ -1,19 +1,20 @@
-import { Accessibility, GroupAdd, Home, Markunread, Motorcycle, Pageview, PhoneAndroid, SupervisedUserCircle } from '@material-ui/icons';
 import React from 'react';
 import { useContext } from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { UserContext } from '../../../../App';
-import ContactInfo from '../../../Home/ContactInfo/ContactInfo';
+import { UserContext } from '../../../../routes/Router';
+import { Accessibility, GroupAdd, Home, Markunread, Motorcycle, Pageview, PhoneAndroid, SupervisedUserCircle } from '@material-ui/icons';
+
 import './Sidebar.css';
+
 const DashboardNavbar = () => {
 
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [isAdmin, setIsAdmin] = useState(false);
 
     useEffect(() => {
-        fetch('https://apple-doctor-server-git.onrender.com/isAdmin', {
+        fetch('http://localhost:5000/isAdmin', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify({ email: loggedInUser.email })

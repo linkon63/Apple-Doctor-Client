@@ -1,15 +1,14 @@
+import { Bookmark } from '@material-ui/icons';
 import React from 'react';
 import { useContext } from 'react';
-import DashboardNavbar from '../DashboardNavber/DashboardNavber/DashboardNavbar';
-import { Bookmark } from '@material-ui/icons';
 import { UserContext } from '../../../routes/Router';
+import DashboardNavbar from '../DashboardNavbar/DashboardNavbar/DashboardNavbar';
 
 const Dashboard = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     return (
         <div className='d-flex'>
-            <DashboardNavbar></DashboardNavbar>
-           
+            <DashboardNavbar />
             <div className='text-center m-auto' >
                 <div className="card w-100">
                     <div className="card-header text-center bg-info text-dark">
@@ -20,9 +19,9 @@ const Dashboard = () => {
                         <blockquote className="blockquote mb-0">
                             <div className="card">
                                 <ul className="list-group list-group-flush">
-                                    <li className="list-group-item"><p><Bookmark></Bookmark> Order Details</p></li>
-                                    <li className="list-group-item"><p><Bookmark></Bookmark> Order Manage</p></li>
-                                    <li className="list-group-item"><p><Bookmark></Bookmark> Order Status</p></li>
+                                    <li className="list-group-item"><p><Bookmark /> Order Details</p></li>
+                                    <li className="list-group-item"><p><Bookmark /> Order Manage</p></li>
+                                    <li className="list-group-item"><p><Bookmark /> Order Status</p></li>
                                 </ul>
                             </div>
 
@@ -34,6 +33,8 @@ const Dashboard = () => {
                     </div>
                 </div>
             </div>
+
+
         </div>
     );
 };

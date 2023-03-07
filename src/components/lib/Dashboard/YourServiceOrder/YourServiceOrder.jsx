@@ -1,9 +1,6 @@
-import React from 'react';
-import { useState } from 'react';
-import { useEffect } from 'react';
-import { useContext } from 'react';
-import { UserContext } from '../../../App';
-import DashboardNavbar from '../DashboardNavber/DashboardNavber/DashboardNavbar';
+import React, { useContext, useEffect, useState } from 'react';
+import { UserContext } from '../../../routes/Router';
+import DashboardNavbar from '../DashboardNavbar/DashboardNavbar/DashboardNavbar';
 import ServiceOrderCard from './ServiceOrderCard';
 
 const YourServiceOrder = () => {
@@ -12,7 +9,7 @@ const YourServiceOrder = () => {
 
 
     useEffect(() => {
-        fetch(`https://apple-doctor-server-git.onrender.com/serviceOrder?email=` + loggedInUser.email)
+        fetch(`http://localhost:5000/serviceOrder?email=` + loggedInUser.email)
             .then(res => res.json())
             .then(data => {
                 console.log(data);
@@ -23,7 +20,7 @@ const YourServiceOrder = () => {
 
     return (
         <div className='d-flex'>
-            <DashboardNavbar></DashboardNavbar>
+            <DashboardNavbar />
             <div className='container text-center'>
                 {!orders.length && <div className="spinner-grow" role="status">
                     <span className="sr-only">Loading...</span>
@@ -35,7 +32,7 @@ const YourServiceOrder = () => {
 
                 <div className='row'>
                     {
-                        orders.map(order => <ServiceOrderCard order={order}></ServiceOrderCard>)
+                        orders.map(order => <ServiceOrderCard order={order} />)
                     }
                 </div>
             </div>

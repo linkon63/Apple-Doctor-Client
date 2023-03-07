@@ -1,12 +1,12 @@
 import React from 'react';
-import { useHistory, useParams } from 'react-router';
+import { Navigate, useHistory, useParams } from 'react-router';
 
 const ServiceOrderCard = ({ order }) => {
-    let history = useHistory();
+    // let history = useHistory();
 
     //Cancel Order
     const orderCancel = id => {
-        fetch(`https://apple-doctor-server-git.onrender.com/allServiceOrderDelete/${id}`, {
+        fetch(`http://localhost:5000/allServiceOrderDelete/${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'
@@ -18,7 +18,8 @@ const ServiceOrderCard = ({ order }) => {
             }
             )
         alert('Your Order has Deleted');
-        history.push('/dashboard');
+        <Navigate to="/dashboard"></Navigate>
+        // history.push('/dashboard');
     }
     return (
         <div className='col-md-4 mb-3'>
